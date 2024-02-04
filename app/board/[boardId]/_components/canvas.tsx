@@ -43,7 +43,7 @@ import { SelectionBox } from "./selection-box";
 import { SelectionTools } from "./selection-tools";
 import { CursorsPresence } from "./cursors-presence";
 
-const MAX_LAYERS = 100;
+const MAX_LAYERS = 100; //max amount of stuff on the whtieboard
 
 interface CanvasProps {
   boardId: string;
@@ -199,7 +199,7 @@ export const Canvas = ({
         pencilDraft[0][0] === point.x &&
         pencilDraft[0][1] === point.y
           ? pencilDraft
-          : [...pencilDraft, [point.x, point.y, e.pressure]],
+          : [...pencilDraft, [point.x, point.y]],
     });
   }, [canvasState.mode]);
 
@@ -237,10 +237,9 @@ export const Canvas = ({
   const startDrawing = useMutation((
     { setMyPresence },
     point: Point,
-    pressure: number,
   ) => {
     setMyPresence({
-      pencilDraft: [[point.x, point.y, pressure]],
+      pencilDraft: [[point.x, point.y]],
       penColor: lastUsedColor,
     })
   }, [lastUsedColor]);
@@ -332,7 +331,7 @@ export const Canvas = ({
     }
 
     if (canvasState.mode === CanvasMode.Pencil) {
-      startDrawing(point, e.pressure);
+      startDrawing(point);
       return;
     }
 

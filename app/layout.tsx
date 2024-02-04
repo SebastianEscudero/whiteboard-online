@@ -9,7 +9,7 @@ import { ModalProvider } from "@/providers/modal-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pizarra Online",
+  title: "Sketchdeck - Una pizarra virtual para colaborar",
   description: "Gestiona tus proyectos de forma colaborativa y en tiempo real.",
 };
 

@@ -28,8 +28,8 @@ export const BotNavbar = () => {
     const { isSignedIn } = useAuth();
 
     return (
-        <footer className="p-4 bg-[#1C1C1E] text-white flex justify-center">
-            <div className="w-[80%]">
+        <footer className="bg-[#1C1C1E] text-white">
+            <div className="lg:mx-[15%] mx-[5%]">
                 <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
                         <AccordionTrigger>Solutions</AccordionTrigger>

@@ -22,14 +22,14 @@ export const LandingNavbar = () => {
     const { isSignedIn } = useAuth();
     const Name = NAME;
     return (
-        <nav className="p-4 bg-[#FFFFFF] border">
-            <div className="flex items-center justify-between mx-[10%]">
+        <nav className="py-4 bg-[#FFFFFF] border">
+            <div className="flex items-center justify-between lg:mx-[15%] mx-[5%]">
                 <div className="flex items-center">
                     <main>
                         <MobileSidebar />
                     </main>
                     <Link href="/dashboard" className="flex items-center mr-3">
-                        <div className="relative h-8 w-8 mr-4">
+                        <div className="relative h-12 w-12 mr-4">
                             <Image
                                 fill
                                 alt="Logo"

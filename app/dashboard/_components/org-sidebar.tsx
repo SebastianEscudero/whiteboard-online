@@ -7,7 +7,7 @@ import { LayoutDashboard, Star } from "lucide-react";
 import { OrganizationSwitcher } from "@clerk/nextjs";
 import { useSearchParams } from "next/navigation";
 
-import { cn } from "@/lib/utils";
+import { NAME, cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 const font = Poppins({
@@ -18,7 +18,7 @@ const font = Poppins({
 export const OrgSidebar = () => {
   const searchParams = useSearchParams();
   const favorites = searchParams.get("favorites");
-
+  const Name = NAME;
   return (
     <div className="hidden lg:flex flex-col space-y-6 w-[206px] pl-5 pt-5">
       <Link href="/dashboard">
@@ -30,10 +30,10 @@ export const OrgSidebar = () => {
             width={60}
           />
           <span className={cn(
-            "font-semibold text-2xl",
+            "font-semibold text-xl",
             font.className,
           )}>
-            Pizarra Online
+            {Name}
           </span>
         </div>
       </Link>

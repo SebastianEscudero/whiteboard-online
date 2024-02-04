@@ -19,10 +19,21 @@ const LandingPage = () => {
                 description="Una pizarra virtual para que puedas dibujar y compartir con tus amigos."
             
             />
+            <BlogSection 
+                title="Una forma rápida y fácil de crear wireframes online" 
+                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
+                img="/placeholders/test.png"
+                side="right"
+            />
             <BlogSection
                 title="Una forma rápida y fácil de crear wireframes online" 
-                text="lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et luctus enim justo non justo. Quisque tincidunt augue in mauris malesuada bibendum. Morbi non euismod magna. Morbi sit amet odio eu purus luctus suscipit. Nullam sed congue lectus. Donec et odio id quam laoreet suscipit. Nam sit amet iaculis sem. Etiam porttitor lacus sit amet libero posuere in mollis elit tempus."
-                img="/placeholders/10.svg"
+                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
+                img="/placeholders/test.png"
+                side="left"
+            />
+            <BlogSection
+                title="Una forma rápida y fácil de crear wireframes online" 
+                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
             />
             <BotNavbar />
         </div>

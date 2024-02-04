@@ -40,7 +40,7 @@ const testimonials = [
 export const LandingContent = () => {
     return (
         <div className="px-10 pb-20">
-            <Carousel
+            {/* <Carousel
                 plugins={[
                     Autoplay({
                         delay: 6000,
@@ -67,7 +67,7 @@ export const LandingContent = () => {
                     </CarouselItem>
                     ))}
                 </CarouselContent>
-            </Carousel>
+            </Carousel> */}
         </div>
     )
 }

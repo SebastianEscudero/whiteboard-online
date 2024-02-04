@@ -15,6 +15,11 @@ const HANDLE_WIDTH = 8;
 export const SelectionBox = memo(({
   onResizeHandlePointerDown,
 }: SelectionBoxProps) => {
+
+  const handleRightClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+  };
+
   const soleLayerId = useSelf((me) =>
     me.presence.selection.length === 1 ? me.presence.selection[0] : null
   );
@@ -32,6 +37,7 @@ export const SelectionBox = memo(({
   return (
     <>
       <rect
+        onContextMenu={handleRightClick}
         className="fill-transparent stroke-blue-500 stroke-1 pointer-events-none"
         style={{
           transform: `translate(${bounds.x}px, ${bounds.y}px)`,
@@ -44,6 +50,7 @@ export const SelectionBox = memo(({
       {isShowingHandles && (
         <>
           <rect
+          
             className="fill-white stroke-1 stroke-blue-500"
             x={0}
             y={0}

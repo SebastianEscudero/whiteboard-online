@@ -24,8 +24,8 @@ export const Path = ({
       onPointerDown={onPointerDown}
       d={getSvgPathFromStroke(
         getStroke(points, {
-          size: 5,
-          thinning: 0.5,
+          size: 3,
+          thinning: 0,
           smoothing: 0.5,
           streamline: 0.5,
         })

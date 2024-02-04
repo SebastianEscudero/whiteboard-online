@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       fontFamily: {
-        'roobert': ['Roobert PRO', 'Helvetica, Arial', 'sans-serif']
+        'roobert': ['Roobert PRO', 'Helvetica', 'Arial', 'sans-serif'],
+        'figtree': ['Figtree', 'sans-serif']
       },
       colors: {
         'custom-blue': '#2E4DE6',
