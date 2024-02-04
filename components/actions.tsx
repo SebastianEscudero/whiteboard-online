@@ -16,6 +16,7 @@ import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { Button } from "@/components/ui/button";
 import { useRenameModal } from "@/store/use-rename-modal";
+import { useRouter } from "next/navigation";
 
 interface ActionsProps {
   children: React.ReactNode;
@@ -43,9 +44,12 @@ export const Actions = ({
       .catch(() => toast.error("Failed to copy link"))
   };
 
+  const router = useRouter();
+
   const onDelete = () => {
     mutate({ id })
       .then(() => toast.success("Board deleted"))
+      .then (() => router.push("/dashboard"))
       .catch(() => toast.error("Failed to delete board"));
   };
 

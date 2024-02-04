@@ -18,7 +18,12 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        'roobert': ['Roobert PRO', 'Helvetica, Arial', 'sans-serif']
+      },
       colors: {
+        'custom-blue': '#2E4DE6',
+        'custom-blue-dark': '#1C3CB6',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -73,8 +78,10 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config
+
 
 export default config

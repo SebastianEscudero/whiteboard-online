@@ -1,17 +1,11 @@
-import { Kalam } from "next/font/google";
 import ContentEditable, { ContentEditableEvent } from "react-contenteditable";
 
 import { TextLayer } from "@/types/canvas";
 import { cn, colorToCss } from "@/lib/utils";
 import { useMutation } from "@/liveblocks.config";
 
-const font = Kalam({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
 const calculateFontSize = (width: number, height: number) => {
-  const maxFontSize = 96;
+  const maxFontSize = 64;
   const scaleFactor = 0.5;
   const fontSizeBasedOnHeight = height * scaleFactor;
   const fontSizeBasedOnWidth = width * scaleFactor;
@@ -66,14 +60,15 @@ export const Text = ({
         html={value || "Text"}
         onChange={handleContentChange}
         className={cn(
-          "h-full w-full flex items-center justify-center text-center drop-shadow-md outline-none",
-          font.className
+          "h-full w-full flex items-center justify-center text-center outline-none font-roobert",
         )}
         style={{
           fontSize: calculateFontSize(width, height),
           color: fill ? colorToCss(fill) : "#000",
         }}
+        spellCheck={false}
       />
+      
     </foreignObject>
   );
 };
