@@ -19,7 +19,6 @@ import MobileSidebar from "./mobile-sidebar";
   
 
 export const LandingNavbar = () => {
-    const { isSignedIn } = useAuth();
     const Name = NAME;
     return (
         <nav className="py-4 bg-[#FFFFFF] border">
@@ -76,7 +75,7 @@ export const LandingNavbar = () => {
                 <div className="hidden sm:flex items-center gap-x-2">
                     <Link href={"/dashboard"}>
                         <Button variant="outline" className="rounded-lg">
-                        {isSignedIn ? "Dashboard" : "Sign up free"}
+                            Sign up free
                         </Button>
                     </Link>
                 </div>
