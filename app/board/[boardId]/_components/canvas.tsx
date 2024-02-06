@@ -42,7 +42,6 @@ import { LayerPreview } from "./layer-preview";
 import { SelectionBox } from "./selection-box";
 import { SelectionTools } from "./selection-tools";
 import { CursorsPresence } from "./cursors-presence";
-import { set } from "date-fns";
 
 const MAX_LAYERS = 100; //max amount of stuff on the whtieboard
 
@@ -363,7 +362,6 @@ export const Canvas = ({
     {},
     e
   ) => {
-    console.log('Stopped panning ...')
     setIsPanning(false);
     document.body.style.cursor = 'default';
     const point = pointerEventToCanvasPoint(e, camera);
@@ -499,7 +497,7 @@ export const Canvas = ({
       >
         <g
           style={{
-            transform: `translate(${camera.x}px, ${camera.y}px)`
+            transform: `translate(${camera.x}px, ${camera.y}px)`,
           }}
         >
           {layerIds.map((layerId) => (

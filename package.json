@@ -40,6 +40,7 @@
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.3",
     "react-infinite-logo-slider": "^1.0.13",
+    "react-move": "^6.5.0",
     "sonner": "^1.4.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
