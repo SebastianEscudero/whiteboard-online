@@ -42,12 +42,17 @@ import { LayerPreview } from "./layer-preview";
 import { SelectionBox } from "./selection-box";
 import { SelectionTools } from "./selection-tools";
 import { CursorsPresence } from "./cursors-presence";
+import { set } from "date-fns";
 
 const MAX_LAYERS = 100; //max amount of stuff on the whtieboard
 
 interface CanvasProps {
   boardId: string;
 };
+
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+});
 
 export const Canvas = ({
   boardId,
@@ -59,6 +64,9 @@ export const Canvas = ({
     mode: CanvasMode.None,
   });
   const [camera, setCamera] = useState<Camera>({ x: 0, y: 0 });
+  const [isPanning, setIsPanning] = useState(false);
+  const [startPanPoint, setStartPanPoint] = useState({ x: 0, y: 0 });
+
   const [lastUsedColor, setLastUsedColor] = useState<Color>({
     r: 0,
     g: 0,
@@ -290,7 +298,14 @@ export const Canvas = ({
     e: React.PointerEvent
   ) => {
     e.preventDefault();
-
+    if (isPanning) {
+      const newCameraPosition = {
+        x: camera.x + e.clientX - startPanPoint.x,
+        y: camera.y + e.clientY - startPanPoint.y,
+      };
+      setCamera(newCameraPosition);
+      setStartPanPoint({ x: e.clientX, y: e.clientY });
+    }
     const current = pointerEventToCanvasPoint(e, camera);
 
     if (canvasState.mode === CanvasMode.Pressing) {
@@ -315,6 +330,7 @@ export const Canvas = ({
     translateSelectedLayers,
     startMultiSelection,
     updateSelectionNet,
+    isPanning,
   ]);
 
   const onPointerLeave = useMutation(({ setMyPresence }) => {
@@ -326,22 +342,30 @@ export const Canvas = ({
   ) => {
     const point = pointerEventToCanvasPoint(e, camera);
 
-    if (canvasState.mode === CanvasMode.Inserting) {
-      return;
-    }
-
-    if (canvasState.mode === CanvasMode.Pencil) {
-      startDrawing(point);
-      return;
-    }
-
-    setCanvasState({ origin: point, mode: CanvasMode.Pressing });
-  }, [camera, canvasState.mode, setCanvasState, startDrawing]);
+    if (e.button === 0) {
+      if (canvasState.mode === CanvasMode.Inserting) {
+        return;
+      }
+  
+      if (canvasState.mode === CanvasMode.Pencil) {
+        startDrawing(point);
+        return;
+      }
+  
+      setCanvasState({ origin: point, mode: CanvasMode.Pressing });
+    } else if (e.button === 2) {
+      setIsPanning(true);
+      setStartPanPoint({ x: e.clientX, y: e.clientY });
+      document.body.style.cursor = 'grabbing';
+    }}, [camera, canvasState.mode, setCanvasState, startDrawing, setIsPanning]);
 
   const onPointerUp = useMutation((
     {},
     e
   ) => {
+    console.log('Stopped panning ...')
+    setIsPanning(false);
+    document.body.style.cursor = 'default';
     const point = pointerEventToCanvasPoint(e, camera);
 
     if (
