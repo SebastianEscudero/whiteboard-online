@@ -1,6 +1,5 @@
 "use client";
 
-import { useAuth } from "@clerk/nextjs";
 import Link from "next/link";
 import TypewriterComponent from "typewriter-effect";
 import { Button } from "./ui/button";
@@ -33,7 +32,7 @@ export const LandingHero = () => {
                     />
                 </div>
             </div>
-            <div className="text-sm md:text-xl font-light text-zinc-800 w-[33%] mx-auto">
+            <div className="text-sm md:text-xl font-light text-zinc-800 w-[33%] mx-auto text-center">
             Brainstorm, collaborate, and bring your ideas to life in our interactive workspace. Join us and turn your thoughts into reality.
             </div>
             <div className="text-center ">

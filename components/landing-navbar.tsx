@@ -1,21 +1,11 @@
 "use client";
 
-import { NAME, cn } from "@/lib/utils";
-import { useAuth } from "@clerk/nextjs";
+import { NAME } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
-  } from "@/components/ui/navigation-menu"
 import MobileSidebar from "./mobile-sidebar";
+import { NavigationMenuLanding } from "./navigation-menu";
   
 
 export const LandingNavbar = () => {
@@ -39,38 +29,7 @@ export const LandingNavbar = () => {
                             {Name}
                         </h1>
                     </Link>
-                    <NavigationMenu className="hidden xl:flex xl:flex-col">
-                        <NavigationMenuList>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                hola
-                                <NavigationMenuLink href="/dashboard">Solutions</NavigationMenuLink>
-                            </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                hola
-                                <NavigationMenuLink href="/dashboard">Link</NavigationMenuLink>
-                            </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Pricing</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                hola
-                                <NavigationMenuLink href="/dashboard">Link</NavigationMenuLink>
-                            </NavigationMenuContent>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-                            <NavigationMenuContent>
-                                hola
-                                <NavigationMenuLink href="/dashboard">Link</NavigationMenuLink>
-                            </NavigationMenuContent>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
+                    <NavigationMenuLanding />
                 </div>
                 <div className="hidden sm:flex items-center gap-x-2">
                     <Link href={"/dashboard"}>

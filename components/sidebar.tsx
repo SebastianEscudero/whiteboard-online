@@ -1,9 +1,7 @@
 import { NAME } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
-import { useAuth } from "@clerk/nextjs";
 
 const routes = [
     {
@@ -39,7 +37,6 @@ const routes = [
 const Sidebar = ({
 }) => {
     const Name = NAME;
-    const { isSignedIn } = useAuth();
     return ( 
         <div className="space-y-4 py-4 flex flex-col h-full bg-[#FFF] text-black">
             <div className="p-3 py-2 flex-1">
@@ -70,9 +67,11 @@ const Sidebar = ({
                     ))}
                 </div>
             </div>
-            <Button variant="outline" className="m-5 text-lg py-5">
-                {isSignedIn ? "Dashboard" : "Sign up free"}
-            </Button>
+            <Link href="/dashboard">
+                <Button variant="outline" className="m-5 text-lg py-5 w-[90%]">
+                    Sign up free
+                </Button>
+            </Link>
         </div>
      );
 }
