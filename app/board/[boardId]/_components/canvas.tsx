@@ -139,8 +139,6 @@ export const Canvas = ({
     setCanvasState({ mode: CanvasMode.None });
   }, [lastUsedColor]);
 
-  console.log(selectedImage, "canvas")
-
   const translateSelectedLayers = useMutation((
     { storage, self },
     point: Point,
@@ -431,6 +429,7 @@ export const Canvas = ({
     unselectLayers,
     insertPath,
     insertImage,
+    selectedImage,
   ]);
 
   const selections = useOthersMapped((other) => other.presence.selection);
