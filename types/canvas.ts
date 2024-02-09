@@ -15,6 +15,7 @@ export type Color = {
     Path,
     Text,
     Note,
+    Image,
   };
   
   export type RectangleLayer = {
@@ -23,7 +24,7 @@ export type Color = {
     y: number;
     height: number;
     width: number;
-    fill: Color;
+    fill: Color | null;
     value?: string;
   };
   
@@ -33,7 +34,7 @@ export type Color = {
     y: number;
     height: number;
     width: number;
-    fill: Color;
+    fill: Color | null;
     value?: string;
   };
   
@@ -43,9 +44,19 @@ export type Color = {
     y: number;
     height: number;
     width: number;
-    fill: Color;
+    fill: Color | null;
     points: number[][];
     value?: string;
+  };
+  
+  export type ImageLayer = {
+    type: LayerType.Image;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    src: string;
+    fill: Color | null;
   };
   
   export type TextLayer = {
@@ -54,7 +65,7 @@ export type Color = {
     y: number;
     height: number;
     width: number;
-    fill: Color;
+    fill: Color | null;
     value?: string;
   };
   
@@ -64,9 +75,10 @@ export type Color = {
     y: number;
     height: number;
     width: number;
-    fill: Color;
+    fill: Color | null;
     value?: string;
   };
+
   
   export type Point = {
     x: number;
@@ -102,7 +114,7 @@ export type Color = {
       }
     | {
         mode: CanvasMode.Inserting,
-        layerType: LayerType.Ellipse | LayerType.Rectangle | LayerType.Text | LayerType.Note;
+        layerType: LayerType.Ellipse | LayerType.Rectangle | LayerType.Text | LayerType.Note | LayerType.Image;
       }
     | {
         mode: CanvasMode.Pencil,
@@ -127,4 +139,4 @@ export type Color = {
     Pencil,
   };
   
-  export type Layer = RectangleLayer | EllipseLayer | PathLayer | TextLayer | NoteLayer
+  export type Layer = RectangleLayer | EllipseLayer | PathLayer | TextLayer | NoteLayer | ImageLayer;

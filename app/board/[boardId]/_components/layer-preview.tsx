@@ -11,6 +11,7 @@ import { Ellipse } from "./ellipse";
 import { Rectangle } from "./rectangle";
 import { Note } from "./note";
 import { Path } from "./path";
+import { InsertImage } from "./image";
 
 interface LayerPreviewProps {
   id: string;
@@ -76,6 +77,14 @@ export const LayerPreview = memo(({
           layer={layer}
           onPointerDown={onLayerPointerDown}
           selectionColor={selectionColor}
+        />
+      );
+    case LayerType.Image:
+      return (
+        <InsertImage
+          id={id}
+          layer={layer}
+          onPointerDown={onLayerPointerDown}
         />
       );
     default:

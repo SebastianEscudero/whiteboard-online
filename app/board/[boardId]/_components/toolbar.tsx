@@ -1,5 +1,6 @@
 import { 
     Circle, 
+    Image, 
     MousePointer2, 
     Pencil, 
     Redo2, 
@@ -9,11 +10,14 @@ import {
     Undo2
   } from "lucide-react";
   
-  import { CanvasMode, CanvasState, LayerType } from "@/types/canvas";
-  
-  import { ToolButton } from "./tool-button";
+import { CanvasMode, CanvasState, LayerType } from "@/types/canvas";
+
+import { ToolButton } from "./tool-button";
+
+import { ImageButton } from "./image-button";
   
   interface ToolbarProps {
+    onImageSelect: (src: string) => void;
     canvasState: CanvasState;
     setCanvasState: (newState: CanvasState) => void;
     undo: () => void;
@@ -29,6 +33,7 @@ import {
     redo,
     canUndo,
     canRedo,
+    onImageSelect
   }: ToolbarProps) => {
     return (
       <div className="absolute top-[50%] -translate-y-[50%] left-2 flex flex-col gap-y-4">
@@ -93,6 +98,19 @@ import {
             isActive={
               canvasState.mode === CanvasMode.Inserting &&
               canvasState.layerType === LayerType.Ellipse
+            }
+          />
+          <ImageButton 
+            onImageSelect={onImageSelect}
+            label="Image"
+            icon={Image}
+            onClick={() => setCanvasState({
+              mode: CanvasMode.Inserting,
+              layerType: LayerType.Image,
+            })}
+            isActive={
+              canvasState.mode === CanvasMode.Inserting &&
+              canvasState.layerType === LayerType.Image
             }
           />
           <ToolButton

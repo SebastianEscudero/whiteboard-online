@@ -72,6 +72,8 @@ export const Canvas = ({
     b: 0,
   });
 
+  const [selectedImage, setSelectedImage] = useState<string>("");
+
  
 
   useDisableScrollBounce();
@@ -106,6 +108,38 @@ export const Canvas = ({
     setMyPresence({ selection: [layerId] }, { addToHistory: true });
     setCanvasState({ mode: CanvasMode.None });
   }, [lastUsedColor]);
+
+  const insertImage = useMutation((
+    { storage, setMyPresence },
+    layerType: LayerType.Image,
+    position: Point,
+    selectedImage: string,
+  ) => {
+    const liveLayers = storage.get("layers");
+    if (liveLayers.size >= MAX_LAYERS) {
+      return;
+    }
+
+    const liveLayerIds = storage.get("layerIds");
+    const layerId = nanoid();
+    const layer = new LiveObject({
+      type: layerType,
+      x: position.x,
+      y: position.y,
+      height: 100,
+      width: 100,
+      src: selectedImage,
+      fill: null
+    });
+
+    liveLayerIds.push(layerId);
+    liveLayers.set(layerId, layer);
+
+    setMyPresence({ selection: [layerId] }, { addToHistory: true });
+    setCanvasState({ mode: CanvasMode.None });
+  }, [lastUsedColor]);
+
+  console.log(selectedImage, "canvas")
 
   const translateSelectedLayers = useMutation((
     { storage, self },
@@ -371,12 +405,14 @@ export const Canvas = ({
       canvasState.mode === CanvasMode.Pressing
     ) {
       unselectLayers();
-      setCanvasState({
+      setCanvasState({  
         mode: CanvasMode.None,
       });
     } else if (canvasState.mode === CanvasMode.Pencil) {
       insertPath();
-    } else if (canvasState.mode === CanvasMode.Inserting) {
+    } else if (canvasState.mode === CanvasMode.Inserting && canvasState.layerType === LayerType.Image) {
+      insertImage(LayerType.Image, point, selectedImage);
+    } else if (canvasState.mode === CanvasMode.Inserting && canvasState.layerType !== LayerType.Image) {
       insertLayer(canvasState.layerType, point);
     } else {
       setCanvasState({
@@ -393,11 +429,12 @@ export const Canvas = ({
     history,
     insertLayer,
     unselectLayers,
-    insertPath
+    insertPath,
+    insertImage,
   ]);
 
   const selections = useOthersMapped((other) => other.presence.selection);
-
+  
   const onLayerPointerDown = useMutation((
     { self, setMyPresence },
     e: React.PointerEvent,
@@ -414,7 +451,6 @@ export const Canvas = ({
     e.stopPropagation();
 
     const point = pointerEventToCanvasPoint(e, camera);
-
     if (!self.presence.selection.includes(layerId)) {
       setMyPresence({ selection: [layerId] }, { addToHistory: true });
     }
@@ -476,6 +512,7 @@ export const Canvas = ({
       <Info boardId={boardId} />
       <Participants />
       <Toolbar
+        onImageSelect={setSelectedImage}
         canvasState={canvasState}
         setCanvasState={setCanvasState}
         canRedo={canRedo}

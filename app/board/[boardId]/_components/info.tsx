@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
-import { cn } from "@/lib/utils";
+import { NAME, cn } from "@/lib/utils";
 import { useQuery } from "convex/react";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
@@ -16,6 +16,8 @@ import { Actions } from "@/components/actions";
 interface InfoProps {
     boardId: string;
 }
+
+const Name = NAME;
 
 const font = Poppins({
     subsets: ["latin"],
@@ -58,7 +60,7 @@ export const Info = ({
                             "font-semibold text-xl ml-2 text-black",
                             font.className
                         )}>
-                            Pizarra Online
+                            {Name}
                         </span>
                     </Link>
                 </Button>

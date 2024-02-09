@@ -4,9 +4,9 @@ import { memo } from "react";
 import { BringToFront, SendToBack, Trash2 } from "lucide-react";
 
 import { Hint } from "@/components/hint";
-import { Camera, Color } from "@/types/canvas";
+import { Camera, Color, LayerType } from "@/types/canvas";
 import { Button } from "@/components/ui/button";
-import { useMutation, useSelf } from "@/liveblocks.config";
+import { useMutation, useSelf, useStorage } from "@/liveblocks.config";
 import { useDeleteLayers } from "@/hooks/use-delete-layers";
 import { useSelectionBounds } from "@/hooks/use-selection-bounds";
 
@@ -21,6 +21,14 @@ export const SelectionTools = memo(({
   camera,
   setLastUsedColor,
 }: SelectionToolsProps) => {
+
+  const soleLayerId = useSelf((me) =>
+  me.presence.selection.length === 1 ? me.presence.selection[0] : null
+  );
+
+  const type = useStorage((root) => 
+    soleLayerId && root.layers.get(soleLayerId)?.type)
+
   const selection = useSelf((me) => me.presence.selection);
 
   const moveToFront = useMutation((
@@ -97,9 +105,10 @@ export const SelectionTools = memo(({
         )`
       }}
     >
+      {type !== LayerType.Image && 
       <ColorPicker
         onChange={setFill}
-      />
+      />}
       <div className="flex flex-col gap-y-0.5">
         <Hint label="Bring to front">
           <Button
