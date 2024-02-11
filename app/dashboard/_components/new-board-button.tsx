@@ -21,7 +21,7 @@ export const NewBoardButton = ({
     const router = useRouter();
 
     // Create a state variable for the title
-    const [title, setTitle] = useState('');
+    const [title, setTitle] = useState('New Board');
 
     const { mutate, pending} = useApiMutation(api.board.create);
     const onClick = () => {

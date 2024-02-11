@@ -14,7 +14,7 @@ import { useState } from 'react';
 
 export const EmptyBoards = () => {
     const router = useRouter();
-    const [title, setTitle] = useState('');
+    const [title, setTitle] = useState('New Board');
 
     const { organization } = useOrganization();
     const { mutate, pending } = useApiMutation(api.board.create);
