@@ -504,6 +504,34 @@ export const Canvas = ({
     }
   }, [deleteLayers, history]);
 
+  useEffect(() => {
+    const handlePaste = (event: any) => {
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const items = (event.clipboardData || event.originalEvent.clipboardData).items;
+      for (let index in items) {
+        const item = items[index];
+        if (item.kind === 'file') {
+          const blob = item.getAsFile();
+          const reader = new FileReader();
+          reader.onload = function(event) {
+            const image = new Image();
+            image.onload = function() {
+              insertImage(LayerType.Image, { x: centerX, y: centerY }, event?.target?.result as string);
+            };
+            image.src = event?.target?.result as string;
+          };
+          reader.readAsDataURL(blob);
+        }
+      }
+    }
+
+    window.addEventListener('paste', handlePaste);
+    return () => {
+      window.removeEventListener('paste', handlePaste);
+    };
+  }, [insertImage, camera]);
+
   return (
     <main
       className="h-full w-full relative bg-neutral-100 touch-none"

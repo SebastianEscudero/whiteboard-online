@@ -19,7 +19,7 @@ interface ConfirmModalProps {
     header: string;
     onConfirm: () => void;
     description?: string;
-    setTitle: (title: string) => void;  // Add setTitle prop
+    setTitle: (title: string) => void;
 }
 
 export const ConfirmBoardModal = ({ children, disabled, header, onConfirm, description, setTitle }: ConfirmModalProps) => {

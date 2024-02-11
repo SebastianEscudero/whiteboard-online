@@ -13,7 +13,6 @@ export const InsertImage = ({
 }: ImageProps) => {
   const dftImageSrc = "/logo.svg"
   const { x, y, width, height, src } = layer;
-  console.log(src, "src")
     return (
       <image 
         id={id}

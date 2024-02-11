@@ -44,7 +44,7 @@ export const NewBoardButton = ({
             description="You can also edit the board name in the canvas"
             disabled={pending}
             onConfirm={onClick}
-            setTitle={setTitle}  // Pass setTitle to ConfirmBoardModal
+            setTitle={setTitle}
         >
             <button
                 disabled={pending || disabled}
