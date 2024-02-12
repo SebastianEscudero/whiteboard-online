@@ -42,6 +42,7 @@ import { LayerPreview } from "./layer-preview";
 import { SelectionBox } from "./selection-box";
 import { SelectionTools } from "./selection-tools";
 import { CursorsPresence } from "./cursors-presence";
+import { toast } from "sonner";
 
 const MAX_LAYERS = 100; //max amount of stuff on the whtieboard
 
@@ -73,7 +74,7 @@ export const Canvas = ({
   });
 
   const [selectedImage, setSelectedImage] = useState<string>("");
-
+  const [isUploading, setIsUploading] = useState(false);
  
 
   useDisableScrollBounce();
@@ -122,6 +123,12 @@ export const Canvas = ({
 
     const liveLayerIds = storage.get("layerIds");
     const layerId = nanoid();
+
+
+    if (selectedImage === "") {
+      return;
+    }
+
     const layer = new LiveObject({
       type: layerType,
       x: position.x,
@@ -409,6 +416,7 @@ export const Canvas = ({
     } else if (canvasState.mode === CanvasMode.Pencil) {
       insertPath();
     } else if (canvasState.mode === CanvasMode.Inserting && canvasState.layerType === LayerType.Image) {
+      setSelectedImage("");
       insertImage(LayerType.Image, point, selectedImage);
     } else if (canvasState.mode === CanvasMode.Inserting && canvasState.layerType !== LayerType.Image) {
       insertLayer(canvasState.layerType, point);
@@ -504,33 +512,33 @@ export const Canvas = ({
     }
   }, [deleteLayers, history]);
 
-  useEffect(() => {
-    const handlePaste = (event: any) => {
-      const centerX = window.innerWidth / 2;
-      const centerY = window.innerHeight / 2;
-      const items = (event.clipboardData || event.originalEvent.clipboardData).items;
-      for (let index in items) {
-        const item = items[index];
-        if (item.kind === 'file') {
-          const blob = item.getAsFile();
-          const reader = new FileReader();
-          reader.onload = function(event) {
-            const image = new Image();
-            image.onload = function() {
-              insertImage(LayerType.Image, { x: centerX, y: centerY }, event?.target?.result as string);
-            };
-            image.src = event?.target?.result as string;
-          };
-          reader.readAsDataURL(blob);
-        }
-      }
-    }
+  // useEffect(() => {
+  //   const handlePaste = (event: any) => {
+  //     const centerX = window.innerWidth / 2;
+  //     const centerY = window.innerHeight / 2;
+  //     const items = (event.clipboardData || event.originalEvent.clipboardData).items;
+  //     for (let index in items) {
+  //       const item = items[index];
+  //       if (item.kind === 'file') {
+  //         const blob = item.getAsFile();
+  //         const reader = new FileReader();
+  //         reader.onload = function(event) { 
+  //           const image = new Image();
+  //           image.onload = function() {
+  //             insertImage(LayerType.Image, { x: centerX, y: centerY }, event?.target?.result as string);
+  //           };
+  //           image.src = event?.target?.result as string;
+  //         };
+  //         reader.readAsDataURL(blob);
+  //       }
+  //     }
+  //   }
 
-    window.addEventListener('paste', handlePaste);
-    return () => {
-      window.removeEventListener('paste', handlePaste);
-    };
-  }, [insertImage, camera]);
+  //   window.addEventListener('paste', handlePaste);
+  //   return () => {
+  //     window.removeEventListener('paste', handlePaste);
+  //   };
+  // }, [insertImage, camera]);
 
   return (
     <main
@@ -539,6 +547,8 @@ export const Canvas = ({
       <Info boardId={boardId} />
       <Participants />
       <Toolbar
+        isUploading={isUploading}
+        setIsUploading={setIsUploading}
         onImageSelect={setSelectedImage}
         canvasState={canvasState}
         setCanvasState={setCanvasState}

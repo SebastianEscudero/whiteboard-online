@@ -15,8 +15,11 @@ import { CanvasMode, CanvasState, LayerType } from "@/types/canvas";
 import { ToolButton } from "./tool-button";
 
 import { ImageButton } from "./image-button";
+import { Dispatch, SetStateAction } from "react";
   
   interface ToolbarProps {
+    isUploading: boolean;
+    setIsUploading: Dispatch<SetStateAction<boolean>>
     onImageSelect: (src: string) => void;
     canvasState: CanvasState;
     setCanvasState: (newState: CanvasState) => void;
@@ -27,6 +30,8 @@ import { ImageButton } from "./image-button";
   };
   
   export const Toolbar = ({
+    isUploading,
+    setIsUploading,
     canvasState,
     setCanvasState,
     undo,
@@ -101,6 +106,8 @@ import { ImageButton } from "./image-button";
             }
           />
           <ImageButton 
+            isUploading={isUploading} 
+            setIsUploading={setIsUploading}
             onImageSelect={onImageSelect}
             label="Image"
             icon={Image}

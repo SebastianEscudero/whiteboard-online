@@ -3,8 +3,6 @@
 import Link from "next/link";
 import TypewriterComponent from "typewriter-effect";
 import { Button } from "./ui/button";
-import { LogoSlider } from "./logo-slider";
-import { BlogSection } from "./blog-section";
 
 export const LandingHero = () => {
     return (
@@ -45,23 +43,6 @@ export const LandingHero = () => {
             <div className="text-zinc-400 text-xs md:text-sm font-normal text-center ">
                 No credit card required.
             </div>
-            <LogoSlider />
-            <BlogSection 
-                title="Una forma rápida y fácil de crear wireframes online" 
-                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
-                img="/placeholders/test.png"
-                side="right"
-            />
-            <BlogSection 
-                title="Una forma rápida y fácil de crear wireframes online" 
-                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
-                img="/placeholders/test.png"
-                side="right"
-            />
-            <BlogSection 
-                title="Una forma rápida y fácil de crear wireframes online" 
-                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
-            />
         </div>
     )
 }

@@ -1,14 +1,7 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "./card";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-  } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import { LogoSlider } from "./logo-slider";
+import { BlogSection } from "./blog-section";
 
 const testimonials = [
     {
@@ -40,34 +33,23 @@ const testimonials = [
 export const LandingContent = () => {
     return (
         <div className="px-10 pb-20">
-            {/* <Carousel
-                plugins={[
-                    Autoplay({
-                        delay: 6000,
-                    }),
-                    ]}
-                    className="mx-[10%]"
-            >
-                <CarouselContent>
-                    {testimonials.map((item) => (
-                    <CarouselItem key={item.description}>
-                        <Card key={item.description} className="bg-[#FFFFFF] border-black text-black rounded-2xl mx-[30%]">
-                            <CardHeader>
-                                <CardTitle className="flex gap-x-2">
-                                    <div>
-                                        <p className="text-sm">{item.name}</p>
-                                        <p className="text-[#535151] text-sm">{item.title}</p>
-                                    </div>
-                                </CardTitle>
-                                <CardContent className="pt-4 px-0">
-                                    {item.description}
-                                </CardContent>
-                            </CardHeader>
-                        </Card>
-                    </CarouselItem>
-                    ))}
-                </CarouselContent>
-            </Carousel> */}
+            <LogoSlider />
+            <BlogSection 
+                title="Una forma rápida y fácil de crear wireframes online" 
+                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
+                img="/placeholders/test.png"
+                side="right"
+            />
+            <BlogSection 
+                title="Una forma rápida y fácil de crear wireframes online" 
+                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
+                img="/placeholders/test.png"
+                side="right"
+            />
+            <BlogSection 
+                title="Una forma rápida y fácil de crear wireframes online" 
+                text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
+            />
         </div>
     )
 }
