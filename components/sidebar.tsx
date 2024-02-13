@@ -69,7 +69,7 @@ const Sidebar = ({
             </div>
             <Link href="/dashboard">
                 <Button variant="outline" className="m-5 text-lg py-5 w-[90%]">
-                    Sign up free
+                    Regístrate gratis
                 </Button>
             </Link>
         </div>

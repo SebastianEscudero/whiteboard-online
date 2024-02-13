@@ -43,7 +43,7 @@ export const LandingContent = () => {
             <BlogSection 
                 title="Una forma rápida y fácil de crear wireframes online" 
                 text="Foster a customer-centric mindset and build a mutual team space, where everyone can capture insights, structure them with diagrams and tables, and share it all in a central spot."
-                img="/placeholders/test.png"
+                img="/placeholders/test2.png"
                 side="right"
             />
             <BlogSection 
