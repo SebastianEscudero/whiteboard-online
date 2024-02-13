@@ -23,32 +23,48 @@ const components: { title: string; href: string}[] = [
     href: "/gestion-producto",
   },
   {
-    title: "Equipos de Ingeniería",
-    href: "/equipos-de-ingenieria",
-  },
-  {
-    title: "Equipos de IT",
-    href: "/equipos-de-it",
-  },
-  {
-    title: "Agencias y Consultorías",
-    href: "/agencias-consultorías",
-  },
-  {
-    title: "Ventas y Marketing",
-    href: "/ventas-marketing",
-  },
-  {
     title: "Pizarra Online",
     href: "/pizarra-online",
+  },
+  {
+    title: "Equipos de Ingeniería",
+    href: "/equipos-de-ingenieria",
   },
   {
     title: "Mapa Conceptual",
     href: "/mapa-conceptual",
   },
   {
+    title: "Equipos de IT",
+    href: "/equipos-de-it",
+  },
+  {
+    title: "Wireframes",
+    href: "/wireframes",
+  },
+  {
+    title: "Marketing",
+    href: "/marketing",
+  },
+  {
+    title: "Mapas mentales",
+    href: "/mapas-mentales",
+  },
+  {
+    title: "Agencias y Consultorías",
+    href: "/agencias-consultorías",
+  },
+  {
     title: "Diseño",
     href: "/diseno",
+  },
+  {
+    title: "Ventas",
+    href: "/ventas",
+  },
+  {
+    title: "Lluvia de Ideas",
+    href: "/lluvia-de-ideas",
   },
 ]
 
@@ -57,48 +73,20 @@ export function NavigationMenuLanding() {
     <NavigationMenu className="hidden xl:flex xl:flex-col">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>¿Qué es {Name}</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <Image 
-                        src="/logo.svg"
-                        alt="Logo"
-                        width={40}
-                        height={40}
-                    />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      {Name}
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      The online workspace for collaboration.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/about" title="About us">
-                Learn more about our team and how {Name} came to be.
-              </ListItem>
-              <ListItem href="/blog" title="Blog">
-                Read our latest articles and tutorials.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
+            <ul className="grid w-[400px] gap-3 p-10 md:w-[500px] lg:w-[300px]">
+              <p className="px-3 text-[13px]">Producto</p>
+              <ListItem href="/product-overview" title={`Descripción de ${Name}`}/>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Soluciones</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-10 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              <p className="px-3">Por equipo</p>
-              <p className="px-3">Por caso de uso</p>
+            <ul className="grid w-[400px] gap-3 p-10 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+              <p className="px-3 text-[13px]">Por equipo</p>
+              <p className="px-3 text-[13px]">Por caso de uso</p>
               {components.map((component) => (
                 <ListItem
                   key={component.title}
@@ -111,6 +99,11 @@ export function NavigationMenuLanding() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
+        <Link href="/blog">
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Blog
+            </NavigationMenuLink>
+          </Link>
           <Link href="/pricing" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Precios
