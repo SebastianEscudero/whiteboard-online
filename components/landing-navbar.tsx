@@ -12,7 +12,7 @@ export const LandingNavbar = () => {
     const Name = NAME;
     return (
         <nav className="py-4 bg-[#FFFFFF] border">
-            <div className="flex items-center justify-between lg:mx-[15%] mx-[5%]">
+            <div className="flex items-center justify-between lg:mx-[10%] mx-[5%]">
                 <div className="flex items-center">
                     <main>
                         <MobileSidebar />
