@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Hint } from "@/components/hint";
 import { useRenameModal } from "@/store/use-rename-modal";
-import { Menu} from "lucide-react";
+import { Menu } from "lucide-react";
 import { Actions } from "@/components/actions";
 
 interface InfoProps {

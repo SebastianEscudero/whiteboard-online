@@ -8,6 +8,10 @@ import { useApiMutation } from "@/hooks/use-api-mutation";
 import { useRouter } from "next/navigation";
 import { ConfirmBoardModal } from "@/components/create-board-modal";
 import React, { useState } from 'react';
+import { useQuery } from "convex/react";
+import { useProModal } from "@/hooks/use-pro-modal";
+
+
 
 interface NewBoardButtonProps {
     orgId: string;
@@ -18,16 +22,21 @@ export const NewBoardButton = ({
     orgId,
     disabled,
 }: NewBoardButtonProps) => {
+    const data = useQuery(api.boards.get, {
+        orgId,
+    });
+
+    const proModal = useProModal();
+
     const router = useRouter();
 
-    // Create a state variable for the title
     const [title, setTitle] = useState('New Board');
 
     const { mutate, pending} = useApiMutation(api.board.create);
     const onClick = () => {
         mutate({
             orgId,
-            title,  // Use the title state variable here
+            title,
         })
             .then((id) => {
                 toast.success("Board created");
@@ -38,12 +47,19 @@ export const NewBoardButton = ({
             });
     }
 
+    const onConfirm = () => {
+        if ((data?.length ?? 0) < 3) {
+            onClick();
+        } else {
+            proModal.onOpen();
+        }
+    }
     return (
         <ConfirmBoardModal
             header="Name your board!"
             description="You can also edit the board name in the canvas"
             disabled={pending}
-            onConfirm={onClick}
+            onConfirm={onConfirm}
             setTitle={setTitle}
         >
             <button

@@ -1,7 +1,7 @@
 "use client";
 
 import { toast } from "sonner";
-import { Link2, Pencil, Trash2 } from "lucide-react";
+import { Link2, Pencil, Trash2, ArrowUpFromLine } from "lucide-react";
 import { DropdownMenuContentProps } from "@radix-ui/react-dropdown-menu";
 
 import { ConfirmModal } from "@/components/confirm-modal";
@@ -10,13 +10,13 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 import { Button } from "@/components/ui/button";
 import { useRenameModal } from "@/store/use-rename-modal";
 import { useRouter } from "next/navigation";
+import { Badge } from "./ui/badge";
 
 interface ActionsProps {
   children: React.ReactNode;
@@ -92,6 +92,15 @@ export const Actions = ({
             Delete
           </Button>
         </ConfirmModal>
+        <DropdownMenuItem
+          className="p-3 cursor-pointer"
+        >
+          <ArrowUpFromLine className="h-4 w-4 mr-2" />
+          Export PDF
+          <Badge className="uppercase text-sm py-1 ml-2" variant="inProgress">
+              Soon
+          </Badge>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -43,6 +43,7 @@ import { SelectionBox } from "./selection-box";
 import { SelectionTools } from "./selection-tools";
 import { CursorsPresence } from "./cursors-presence";
 import { toast } from "sonner";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const MAX_LAYERS = 100; //max amount of stuff on the whtieboard
 
@@ -57,6 +58,7 @@ document.addEventListener('contextmenu', (e) => {
 export const Canvas = ({
   boardId,
 }: CanvasProps) => {
+  const proModal = useProModal();
   const layerIds = useStorage((root) => root.layerIds);
 
   const pencilDraft = useSelf((me) => me.presence.pencilDraft);
@@ -89,6 +91,7 @@ export const Canvas = ({
   ) => {
     const liveLayers = storage.get("layers");
     if (liveLayers.size >= MAX_LAYERS) {
+      proModal.onOpen();
       return;
     }
 
@@ -118,6 +121,7 @@ export const Canvas = ({
   ) => {
     const liveLayers = storage.get("layers");
     if (liveLayers.size >= MAX_LAYERS) {
+      proModal.onOpen();
       return;
     }
 
@@ -261,6 +265,7 @@ export const Canvas = ({
       liveLayers.size >= MAX_LAYERS
     ) {
       setMyPresence({ pencilDraft: null });
+      proModal.onOpen();
       return;
     }
 

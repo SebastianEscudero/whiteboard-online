@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner"
 import { ModalProvider } from "@/providers/modal-provider";
 import { Suspense } from "react";
 import { Loading } from "@/components/auth/loading";
+import { ProModalProvider } from "@/providers/max-layers-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Suspense fallback={<Loading />}>
           <ConvexClientProvider>
             <Toaster />
+            <ProModalProvider />
             <ModalProvider />
             {children}
           </ConvexClientProvider>

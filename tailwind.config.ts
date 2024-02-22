@@ -18,6 +18,15 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: theme => ({
+        'blur-background': "url('/placeholders/test6.jpg')",
+      }),
+      backgroundSize: {
+        'cover': 'cover',
+      },
+      blur: {
+        'blur': '5px',
+      },
       fontFamily: {
         'roobert': ['Roobert PRO', 'Helvetica', 'Arial', 'sans-serif'],
         'figtree': ['Figtree', 'sans-serif']

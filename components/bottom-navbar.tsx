@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion"
 
 import { LogoSlider } from "./logo-slider";
+import Image from "next/image";
   
 const components: { title: string; href: string}[] = [
     {
@@ -67,7 +68,7 @@ export const BotNavbar = () => {
     return (
         <footer className="bg-[#1C1C1E] text-white">
             <div className="py-10">
-                <div className="text-center mt-10 mx-[5%] sm:mx-[20%]">
+                <div className="text-center mt-10 mx-[5%] lg:mx-[30%]">
                     <h1 className="lg:text-5xl mb-8 md:text-4xl text-xl">
                         Únete a los 1000+ de usuarios de Sketchdeck hoy mismo.
                     </h1>
@@ -107,7 +108,7 @@ export const BotNavbar = () => {
                         </ul>
                         </AccordionContent>
                     </AccordionItem>
-                    <div className="py-4 text-lg border-b">
+                    <div className="py-4 text-lg border-b font-medium">
                         <Link
                             className="py-5 text-lg hover:underline ml-5"
                             href="/blog"
@@ -115,7 +116,7 @@ export const BotNavbar = () => {
                             Blog
                         </Link>
                     </div>
-                    <div className="py-4 text-lg border-b">
+                    <div className="py-4 text-lg border-b font-medium">
                         <Link
                             className="py-5 text-lg hover:underline ml-5"
                             href="/precios"
@@ -124,6 +125,25 @@ export const BotNavbar = () => {
                         </Link>
                     </div>
                 </Accordion>
+                <div className="lg:mx-[10%] sm:mx-[5%] mx-0 lg:text-lg text-xs mt-10 px-4 flex justify-center flex-col">
+                  <Link
+                    href="/dashboard"
+                    className="flex justify-center"
+                  >
+                    <Image 
+                        src="/logo.svg"
+                        width={50}
+                        height={50}
+                        alt="Logo"
+                    />
+                    <p className="ml-2 hover:underline">
+                      Sketchdeck
+                    </p>
+                  </Link>
+                  <p className="ml-2 text-center mt-3">
+                     © 2024. Todos los derechos reservados.
+                  </p>
+                </div>
             </div>
         </footer>
     )

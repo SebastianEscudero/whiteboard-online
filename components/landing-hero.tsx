@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 export const LandingHero = () => {
     return (
-        <div className="text-[#1c1c1e] font-normal font-roobert pt-28 space-y-5 lg:mx-[20%] mx-[5%]">
+        <div className="text-[#1c1c1e] font-normal pt-28 space-y-5 lg:mx-[25%] md:mx-[15%] mx-[5%]">
             <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 text-center">
                 <h1>
                     Dibuja tus sueños y hazlos realidad
@@ -26,7 +26,7 @@ export const LandingHero = () => {
                     />
                 </div>
             </div>
-            <div className="text-sm md:text-xl font-light text-zinc-800 mx-auto text-center">
+            <div className="text-sm md:text-xl font-normal text-zinc-800 mx-auto text-center">
             Haz una lluvia de ideas, colabora y da vida a tus ideas en nuestro espacio de trabajo interactivo. Únete a nosotros y convierte tus ideas en realidad.
             </div>
             <div className="text-center ">

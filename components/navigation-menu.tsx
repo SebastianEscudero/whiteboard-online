@@ -18,7 +18,7 @@ const Name = NAME;
 
 const components: { title: string; href: string}[] = [
   {
-    title: "Gestión de producto",
+    title: "Gestión de producto 🚧",
     href: "/gestion-producto",
   },
   {
@@ -26,43 +26,43 @@ const components: { title: string; href: string}[] = [
     href: "/pizarra-online",
   },
   {
-    title: "Equipos de Ingeniería",
+    title: "Equipos de Ingeniería 🚧",
     href: "/equipos-de-ingenieria",
   },
   {
-    title: "Mapa Conceptual",
+    title: "Mapa Conceptual 🚧",
     href: "/mapa-conceptual",
   },
   {
-    title: "Equipos de IT",
+    title: "Equipos de IT 🚧",
     href: "/equipos-de-it",
   },
   {
-    title: "Wireframes",
+    title: "Wireframes 🚧",
     href: "/wireframes",
   },
   {
-    title: "Marketing",
+    title: "Marketing 🚧",
     href: "/marketing",
   },
   {
-    title: "Mapas mentales",
+    title: "Mapas mentales 🚧",
     href: "/mapas-mentales",
   },
   {
-    title: "Agencias y Consultorías",
+    title: "Agencias y Consultorías 🚧",
     href: "/agencias-consultorías",
   },
   {
-    title: "Diseño",
+    title: "Diseño 🚧",
     href: "/diseno",
   },
   {
-    title: "Ventas",
+    title: "Ventas 🚧",
     href: "/ventas",
   },
   {
-    title: "Lluvia de Ideas",
+    title: "Lluvia de Ideas 🚧",
     href: "/lluvia-de-ideas",
   },
 ]
@@ -74,9 +74,9 @@ export function NavigationMenuLanding() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>¿Qué es {Name}</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-10 md:w-[500px] lg:w-[300px]">
+            <ul className="grid w-[400px] gap-3 p-8 md:w-[500px] lg:w-[300px]">
               <p className="px-3 text-[13px]">Producto</p>
-              <ListItem href="/product-overview" title={`Descripción de ${Name}`}/>
+              <ListItem href="/product-overview" title={`Descripción de ${Name} 🚧`}/>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
