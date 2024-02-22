@@ -1,5 +1,4 @@
 import { ImageLayer } from "@/types/canvas";
-import { Dispatch, SetStateAction } from "react";
 
 interface ImageProps {
   isUploading: boolean;
@@ -14,7 +13,6 @@ export const InsertImage = ({
   id,
   layer,
   onPointerDown,
-  selectionColor,
 }: ImageProps) => {
   const { x, y, width, height, src } = layer;
     if (!isUploading ) {

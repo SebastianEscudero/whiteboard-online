@@ -82,6 +82,7 @@ export const LayerPreview = memo(({
     case LayerType.Image:
       return (
         <InsertImage
+          isUploading={false}
           id={id}
           layer={layer}
           onPointerDown={onLayerPointerDown}

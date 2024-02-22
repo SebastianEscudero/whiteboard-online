@@ -140,7 +140,8 @@ export const Canvas = ({
       height: 100,
       width: 100,
       src: selectedImage,
-      fill: null
+      fill: null,
+      value: "",
     });
 
     liveLayerIds.push(layerId);

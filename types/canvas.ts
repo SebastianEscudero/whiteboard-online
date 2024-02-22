@@ -57,6 +57,7 @@ export type Color = {
     height: number;
     src: string;
     fill: Color | null;
+    value?: string;
   };
   
   export type TextLayer = {

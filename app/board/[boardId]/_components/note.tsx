@@ -36,7 +36,7 @@ export const Note = ({
   id,
   selectionColor,
 }: NoteProps) => {
-  const { x, y, width, height, fill, value } = layer;
+  const { x, y, width, height, fill, value} = layer;
 
   const updateValue = useMutation((
     { storage },
