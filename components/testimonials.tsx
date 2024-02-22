@@ -13,7 +13,7 @@ const testimonials = [
         name: "Maximilian Smith",
         avatar: "M",
         title: "CRM Manager",
-        description: `"${name} is a great tool for professionals. It helps me enhance the overall editing process and collaborate with my team in real time."`
+        description: `"${name} is awesome!. It helps me enhance the overall editing process and collaborate with my team in real time."`
     },
     {
         name: "Paula Verastegui",

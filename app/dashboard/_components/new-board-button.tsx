@@ -22,9 +22,9 @@ export const NewBoardButton = ({
     orgId,
     disabled,
 }: NewBoardButtonProps) => {
-    const data = useQuery(api.boards.get, {
+    const data = useQuery(api.boards.get, { 
         orgId,
-    });
+      });
 
     const proModal = useProModal();
 

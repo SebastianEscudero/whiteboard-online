@@ -11,24 +11,24 @@ export const BlogStructure = ({
     description
 }: BlogStructureProps) => {
     return (
-        <div className="text-[#1c1c1e] font-normal font-roobert py-28 text-center space-y-5">
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl space-y-5">
+        <div className="text-[#1c1c1e] font-normal pt-28 space-y-5 lg:mx-[25%] md:mx-[15%] mx-[5%]">
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 text-center">
                 <h1>
                     {title}
                 </h1>
             </div>
-            <div className="text-sm md:text-xl font-light text-zinc-800 w-[33%] mx-auto">
-            {description}
+            <div className="text-sm md:text-xl font-normal text-zinc-800 mx-auto text-center">
+                {description}
             </div>
-            <div>
+            <div className="text-center ">
                 <Link href={"/dashboard"}>
-                    <Button variant="outline" className="md:text-lg p-4 md:p-6 rounded-full font-normal">
-                        {"Sign up free"}
+                    <Button variant="outline" className="md:text-lg p-4 md:p-6 font-normal">
+                        Regístrate gratis
                     </Button>
                 </Link>
             </div>
-            <div className="text-zinc-400 text-xs md:text-sm font-normal">
-                No credit card required.
+            <div className="text-zinc-400 text-xs md:text-sm font-normal text-center">
+                No se requiere tarjeta de crédito
             </div>
         </div>
     )

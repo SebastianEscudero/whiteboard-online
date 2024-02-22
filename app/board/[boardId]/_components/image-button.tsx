@@ -4,7 +4,7 @@ import { Hint } from "@/components/hint";
 import { Button } from "@/components/ui/button";
 import { LucideIcon } from "lucide-react";
 import { toast } from "sonner"
-import { useUploadThing } from "@/lib/utils";
+import { useUploadThing } from "@/lib/uploadthingutil";
 import { useRef, Dispatch, SetStateAction } from "react";
 
 

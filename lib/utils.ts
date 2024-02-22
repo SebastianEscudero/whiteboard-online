@@ -182,10 +182,3 @@ export function getSvgPathFromStroke(stroke: number[][]) {
 };
 
 export const NAME = "Sketchdeck";
-
-
-import { generateReactHelpers } from "@uploadthing/react";
- 
-import type { OurFileRouter } from "@/app/api/uploadthing/core";
- 
-export const { useUploadThing } = generateReactHelpers<OurFileRouter>();
