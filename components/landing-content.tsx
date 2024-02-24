@@ -35,7 +35,7 @@ export const LandingContent = () => {
             <BlogSection 
                 title="Conecta toda tu empresa en un espacio seguro."
                 text="La seguridad es nuestra prioridad. Con Sketchlie, puedes estar seguro de que tus datos están protegidos con las más altas medidas de seguridad empresarial."
-                img="/placeholders/landing3.png"
+                img="/placeholders/landing4.png"
                 side="right"
             />
             <BlogTestimonials

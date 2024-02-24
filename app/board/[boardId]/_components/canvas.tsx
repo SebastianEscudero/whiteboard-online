@@ -45,7 +45,7 @@ import { CursorsPresence } from "./cursors-presence";
 import { toast } from "sonner";
 import { useProModal } from "@/hooks/use-pro-modal";
 
-const MAX_LAYERS = 2; //max amount of stuff on the whtieboard
+const MAX_LAYERS = 100; //max amount of stuff on the whtieboard
 
 interface CanvasProps {
   boardId: string;
