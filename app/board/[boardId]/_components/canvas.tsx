@@ -45,7 +45,7 @@ import { CursorsPresence } from "./cursors-presence";
 import { toast } from "sonner";
 import { useProModal } from "@/hooks/use-pro-modal";
 
-const MAX_LAYERS = 100; //max amount of stuff on the whtieboard
+const MAX_LAYERS = 2; //max amount of stuff on the whtieboard
 
 interface CanvasProps {
   boardId: string;
@@ -260,13 +260,17 @@ export const Canvas = ({
     const liveLayers = storage.get("layers");
     const { pencilDraft } = self.presence;
 
+    if (liveLayers.size >= MAX_LAYERS) {
+      proModal.onOpen();
+      setMyPresence({ pencilDraft: null });
+      return;
+    }
+
     if (
       pencilDraft == null ||
-      pencilDraft.length < 2 ||
-      liveLayers.size >= MAX_LAYERS
+      pencilDraft.length < 2
     ) {
       setMyPresence({ pencilDraft: null });
-      proModal.onOpen();
       return;
     }
 

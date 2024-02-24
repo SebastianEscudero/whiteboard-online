@@ -22,7 +22,7 @@ export const LandingContent = () => {
             />
             <BlogSection 
                 title="Tu próxima gran idea comienza aquí." 
-                text="Te brindamos las herramientas necesarias para diseñar el futuro. Desde estrategia y planificación hasta desarrollo de productos y servicios, todo se simplifica cuando trabajas en un espacio ilimitado como Sketchdeck."
+                text="Te brindamos las herramientas necesarias para diseñar el futuro. Desde estrategia y planificación hasta desarrollo de productos y servicios, todo se simplifica cuando trabajas en un espacio ilimitado como Sketchlie."
                 img="/placeholders/landing1.png"
                 side="right"
             />
@@ -34,13 +34,13 @@ export const LandingContent = () => {
             />
             <BlogSection 
                 title="Conecta toda tu empresa en un espacio seguro."
-                text="La seguridad es nuestra prioridad. Con Sketchdeck, puedes estar seguro de que tus datos están protegidos con las más altas medidas de seguridad empresarial."
+                text="La seguridad es nuestra prioridad. Con Sketchlie, puedes estar seguro de que tus datos están protegidos con las más altas medidas de seguridad empresarial."
                 img="/placeholders/landing3.png"
                 side="right"
             />
             <BlogTestimonials
                 title="Itera y desarrolla productos y servicios de manera eficiente."
-                text="Nuestras funciones avanzadas te permiten innovar y llevar tus proyectos al mercado más rápido. Desde diagramas hasta talleres, Sketchdeck está diseñado para apoyar los procesos de desarrollo de productos de manera ágil y efectiva."
+                text="Nuestras funciones avanzadas te permiten innovar y llevar tus proyectos al mercado más rápido. Desde diagramas hasta talleres, Sketchlie está diseñado para apoyar los procesos de desarrollo de productos de manera ágil y efectiva."
             />
         </div>
     )

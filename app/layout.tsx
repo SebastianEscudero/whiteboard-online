@@ -12,7 +12,7 @@ import { ProModalProvider } from "@/providers/max-layers-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sketchdeck - Una pizarra virtual para colaborar",
+  title: "Sketchlie - Una pizarra virtual para colaborar",
   description: "Gestiona tus proyectos de forma colaborativa y en tiempo real.",
 };
 

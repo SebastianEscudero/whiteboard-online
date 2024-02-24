@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       backgroundImage: theme => ({
-        'blur-background': "url('/placeholders/test6.jpg')",
+        'blur-background': "url('/placeholders/landingcta.jpg')",
       }),
       backgroundSize: {
         'cover': 'cover',

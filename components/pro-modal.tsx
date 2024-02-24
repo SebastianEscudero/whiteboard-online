@@ -32,7 +32,7 @@ export const ProModal = () => {
                                 Pronto estará disponible
                             </Badge>
                             <div className="flex items-center gap-x-2 font-bold py-1">
-                                Sketchdeck
+                                Sketchlie
                                 <Badge className="uppercase text-sm py-1" variant="outline">
                                     Pro
                                 </Badge>

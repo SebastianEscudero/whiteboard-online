@@ -70,10 +70,10 @@ export const BotNavbar = () => {
             <div className="py-10">
                 <div className="text-center mt-10 mx-[5%] lg:mx-[30%]">
                     <h1 className="lg:text-5xl mb-8 md:text-4xl text-xl">
-                        Únete a los 1000+ de usuarios de Sketchdeck hoy mismo.
+                        Únete a los 1000+ de usuarios de Sketchlie hoy mismo.
                     </h1>
                     <p>
-                        Sé parte de la comunidad que impulsa la innovación y la colaboración con Sketchdeck. Regístrate ahora con tu correo electrónico laboral y comienza a transformar tus ideas en realidad.
+                        Sé parte de la comunidad que impulsa la innovación y la colaboración con Sketchlie. Regístrate ahora con tu correo electrónico laboral y comienza a transformar tus ideas en realidad.
                     </p>
                     <Button variant="outline" className="mt-10">
                         Regístrate gratis.
@@ -87,7 +87,7 @@ export const BotNavbar = () => {
                             <Link 
                                 className="p-3 text-lg hover:underline ml-5"
                                 href="/product-overview">
-                                Descripción de Sketchdeck
+                                Descripción de Sketchlie
                             </Link>
                         </AccordionContent>
                     </AccordionItem>
@@ -137,7 +137,7 @@ export const BotNavbar = () => {
                         alt="Logo"
                     />
                     <p className="ml-2 hover:underline">
-                      Sketchdeck
+                      Sketchlie
                     </p>
                   </Link>
                   <p className="ml-2 text-center mt-3">

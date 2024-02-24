@@ -181,4 +181,4 @@ export function getSvgPathFromStroke(stroke: number[][]) {
   return d.join(" ");
 };
 
-export const NAME = "Sketchdeck";
+export const NAME = "Sketchlie";
