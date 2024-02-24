@@ -30,7 +30,7 @@ export const LandingContent = () => {
                 title="Desarrolla soluciones a medida para tus clientes."
                 text="Fomenta una cultura centrada en la satisfacción del cliente con un entorno colaborativo donde puedas generar, estructurar y compartir ideas con tu equipo, todo en un mismo lugar." 
                 img="/placeholders/landing2.png"
-                side="right"
+                side="left"
             />
             <BlogSection 
                 title="Conecta toda tu empresa en un espacio seguro."
