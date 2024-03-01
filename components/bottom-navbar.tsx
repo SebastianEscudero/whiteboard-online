@@ -12,7 +12,8 @@ import {
 
 import { LogoSlider } from "./logo-slider";
 import Image from "next/image";
-  
+import { useUser } from "@clerk/clerk-react";
+
 const components: { title: string; href: string}[] = [
     {
       title: "Gestión de producto",
@@ -65,6 +66,8 @@ const components: { title: string; href: string}[] = [
   ]
 
 export const BotNavbar = () => {
+    const { user } = useUser();
+
     return (
         <footer className="bg-[#1C1C1E] text-white">
             <div className="py-10">
@@ -75,9 +78,11 @@ export const BotNavbar = () => {
                     <p>
                         Sé parte de la comunidad que impulsa la innovación y la colaboración con Sketchlie. Regístrate ahora con tu correo electrónico laboral y comienza a transformar tus ideas en realidad.
                     </p>
-                    <Button variant="outline" className="mt-10">
-                        Regístrate gratis.
-                    </Button>
+                    <Link href={"/dashboard"}>
+                      <Button variant="outline" className="mt-10">
+                          {user ? "Ir a Tablero" : "Regístrate gratis"}
+                      </Button>
+                  </Link>
                 </div>
                 <LogoSlider />
                 <Accordion type="single" collapsible className="lg:mx-[10%] sm:mx-[5%] mx-0 text-lg">

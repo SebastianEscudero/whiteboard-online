@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useUser } from "@clerk/clerk-react";
 
 export const metadata: Metadata = {
     title: "Pizarra Online | Pizzara virtual para colaborar gratuita | Sketchlie",
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
   };
 
 const LandingPage = () => {
+    const { user } = useUser();
     const tools = [
         {
             features: {
@@ -80,7 +82,7 @@ const LandingPage = () => {
             <div className="text-center mb-10">
                 <Link href={"/dashboard"}>
                     <Button variant="outline" className="md:text-lg p-4 md:p-6 font-normal">
-                        Regístrate gratis
+                        {user ? "Ir a Tablero" : "Regístrate gratis"}
                     </Button>
                 </Link>
             </div>

@@ -1,7 +1,7 @@
 export default {
     providers: [
       {
-        domain: "https://www.sketchlie.com/",
+        domain: "https://clerk.sketchlie.com",
         applicationID: "convex",
       },
     ]

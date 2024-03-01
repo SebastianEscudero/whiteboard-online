@@ -2,6 +2,7 @@ import { NAME } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { useUser } from "@clerk/clerk-react";
 
 const routes: { title: string; href: string}[] = [
   {
@@ -56,10 +57,11 @@ const routes: { title: string; href: string}[] = [
 
 const Sidebar = ({
 }) => {
+    const { user } = useUser();
     const Name = NAME;
     return ( 
         <div className="space-y-4 py-4 flex flex-col h-full bg-[#FFF] text-black">
-            <div className="p-3 py-2 flex-1">
+            <div className="px-3 flex-1">
                 <div className="border-top p-3 font-medium flex items-center">
                     <Image
                         className="mr-2"
@@ -78,7 +80,7 @@ const Sidebar = ({
                             href={route.href}
                             key={route.href}
                             className=
-                                "text-md group flex p-3 w-full justify-start font-medium cursor-pointer hover:underline hover:bg-zinc-400/10 rounded-lg transition text-[#2B2B2C] mt-8"
+                                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:underline hover:bg-zinc-400/10 rounded-lg transition text-[#2B2B2C] mt-4"
                         >
                             <div className="flex items-center flex-1">
                                 {route.title}
@@ -88,8 +90,8 @@ const Sidebar = ({
                 </div>
             </div>
             <Link href="/dashboard">
-                <Button variant="outline" className="m-5 text-lg py-5 w-[90%]">
-                    Regístrate gratis
+                <Button variant="outline" className="mx-5 text-lg w-[90%]">
+                    {user ? "Ir a Tablero" : "Regístrate gratis"}
                 </Button>
             </Link>
         </div>
