@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useUser } from "@clerk/clerk-react";
+import { useUser } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
     title: "Pizarra Online | Pizzara virtual para colaborar gratuita | Sketchlie",

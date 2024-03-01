@@ -3,7 +3,7 @@
 import Link from "next/link";
 import TypewriterComponent from "typewriter-effect";
 import { Button } from "./ui/button";
-import { useUser } from "@clerk/clerk-react";
+import { useUser } from "@clerk/nextjs";
 
 export const LandingHero = () => {
     const { user } = useUser();

@@ -2,7 +2,7 @@ import { NAME } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { useUser } from "@clerk/clerk-react";
+import { useUser } from "@clerk/nextjs";
 
 const routes: { title: string; href: string}[] = [
   {

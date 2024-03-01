@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import MobileSidebar from "./mobile-sidebar";
 import { NavigationMenuLanding } from "./navigation-menu";
-import { useUser } from "@clerk/clerk-react";
+import { useUser } from "@clerk/nextjs";
 
 export const LandingNavbar = () => {
     const { user } = useUser();

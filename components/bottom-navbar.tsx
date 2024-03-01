@@ -12,7 +12,7 @@ import {
 
 import { LogoSlider } from "./logo-slider";
 import Image from "next/image";
-import { useUser } from "@clerk/clerk-react";
+import { useUser } from "@clerk/nextjs";
 
 const components: { title: string; href: string}[] = [
     {
