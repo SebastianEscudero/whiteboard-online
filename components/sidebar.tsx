@@ -91,7 +91,7 @@ const Sidebar = ({
             </div>
             <Link href="/dashboard">
                 <Button variant="outline" className="mx-5 text-lg w-[90%]">
-                    {user ? "Ir a Tablero" : "Regístrate gratis"}
+                    {user ? "Ir al Tablero" : "Regístrate gratis"}
                 </Button>
             </Link>
         </div>

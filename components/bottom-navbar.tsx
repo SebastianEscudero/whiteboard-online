@@ -80,7 +80,7 @@ export const BotNavbar = () => {
                     </p>
                     <Link href={"/dashboard"}>
                       <Button variant="outline" className="mt-10">
-                          {user ? "Ir a Tablero" : "Regístrate gratis"}
+                          {user ? "Ir al Tablero" : "Regístrate gratis"}
                       </Button>
                   </Link>
                 </div>

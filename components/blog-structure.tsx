@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link"
 import { Button } from "./ui/button"
+import { useUser } from "@clerk/nextjs";
 
 interface BlogStructureProps {
     title: string;
@@ -10,6 +13,8 @@ export const BlogStructure = ({
     title,
     description
 }: BlogStructureProps) => {
+    const { user } = useUser();
+    
     return (
         <div className="text-[#1c1c1e] font-normal pt-28 space-y-5 lg:mx-[25%] md:mx-[15%] mx-[5%]">
             <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 text-center">
@@ -23,7 +28,7 @@ export const BlogStructure = ({
             <div className="text-center ">
                 <Link href={"/dashboard"}>
                     <Button variant="outline" className="md:text-lg p-4 md:p-6 font-normal">
-                        Regístrate gratis
+                        {user ? "Ir al Tablero" : "Regístrate gratis"}
                     </Button>
                 </Link>
             </div>

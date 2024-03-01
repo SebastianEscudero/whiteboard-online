@@ -9,9 +9,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { useUser } from "@clerk/nextjs";
+import { DashboardButton } from "@/components/register-button";
 
 export const metadata: Metadata = {
     title: "Pizarra Online | Pizzara virtual para colaborar gratuita | Sketchlie",
@@ -19,7 +17,6 @@ export const metadata: Metadata = {
   };
 
 const LandingPage = () => {
-    const { user } = useUser();
     const tools = [
         {
             features: {
@@ -80,14 +77,10 @@ const LandingPage = () => {
                 text="Regístrate gratis y comienza a usar Sketchlie hoy. No se requiere tarjeta de crédito."	
             />
             <div className="text-center mb-10">
-                <Link href={"/dashboard"}>
-                    <Button variant="outline" className="md:text-lg p-4 md:p-6 font-normal">
-                        {user ? "Ir a Tablero" : "Regístrate gratis"}
-                    </Button>
-                </Link>
+                <DashboardButton />
             </div>
             <BlogSection 
-                title="Preguntas frecuentes sobre las pizarras online de Sketchlie" 
+                title="Preguntas frecuentes de las pizarras online de Sketchlie" 
             />
             <Accordion type="single" collapsible className="lg:mx-[10%] sm:mx-[5%] mx-0 text-lg bg-white p-3 mb-20">
                     <AccordionItem value="item-1">

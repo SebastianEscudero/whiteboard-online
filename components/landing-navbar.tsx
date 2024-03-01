@@ -36,7 +36,7 @@ export const LandingNavbar = () => {
                 <div className="hidden sm:flex items-center gap-x-2">
                     <Link href={"/dashboard"}>
                         <Button variant="outline" className="rounded-lg">
-                            {user ? "Ir a Tablero" : "Regístrate gratis"}
+                            {user ? "Ir al Tablero" : "Regístrate gratis"}
                         </Button>
                     </Link>
                 </div>
