@@ -12,6 +12,9 @@ import {
   XYWH
 } from "@/types/canvas";
 
+import jsPDF from "jspdf";
+import Canvg from 'canvg'
+
 const COLORS = [
   "#DC2626", 
   "#D97706", 
@@ -182,3 +185,7 @@ export function getSvgPathFromStroke(stroke: number[][]) {
 };
 
 export const NAME = "Sketchlie";
+
+export const exportToPdf = async (title: string) => {
+  console.log("soon")
+}

@@ -3,23 +3,19 @@
 import { LogoSlider } from "./logo-slider";
 import { BlogSection } from "./blog-section";
 import { BlogTestimonials } from "./blog-testimonials";
+import { LandingVideo } from "./landing-video";
 
 export const LandingContent = () => {
     return (
         <div>
             <LogoSlider />
-            <div className="w-full lg:px-[5%] px-[2%] flex justify-center">
-                <video 
-                    className="rounded-2xl border border-black"
-                    src="/placeholders/landingvideo.mp4"
-                    autoPlay
-                    loop
-                    muted
+            <LandingVideo />
+            <div className="my-28">
+                <BlogSection 
+                    title="Colabora hoy para definir el mañana."
+                    text="Con Sketchlie, puedes colaborar con tu equipo en tiempo real, compartir ideas, añadir notas y desarrollar proyectos de forma colaborativa, sin importar su ubicación geográfica. Nuestra pizarra online va más allá al ofrecer una amplia gama de características diseñadas específicamente para potenciar la creatividad y la productividad de los equipos."
                 />
             </div>
-            <BlogSection 
-                title="Colabora hoy para definir el mañana."
-            />
             <BlogSection 
                 title="Tu próxima gran idea comienza aquí." 
                 text="Te brindamos las herramientas necesarias para diseñar el futuro. Desde estrategia y planificación hasta desarrollo de productos y servicios, todo se simplifica cuando trabajas en un espacio ilimitado como Sketchlie."

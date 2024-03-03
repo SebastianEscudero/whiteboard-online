@@ -30,7 +30,7 @@ const components: { title: string; href: string}[] = [
     href: "/equipos-de-ingenieria",
   },
   {
-    title: "Mapa Conceptual 🚧",
+    title: "Mapa Conceptual ",
     href: "/mapa-conceptual",
   },
   {

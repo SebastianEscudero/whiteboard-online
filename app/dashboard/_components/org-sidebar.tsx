@@ -21,7 +21,7 @@ export const OrgSidebar = () => {
   const Name = NAME;
   return (
     <div className="hidden lg:flex flex-col space-y-6 w-[206px] pl-5 pt-5">
-      <Link href="/dashboard">
+      <Link href="/">
         <div className="flex items-center gap-x-2">
           <Image
             src="/logo.svg"

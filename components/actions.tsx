@@ -16,6 +16,7 @@ import { useApiMutation } from "@/hooks/use-api-mutation";
 import { Button } from "@/components/ui/button";
 import { useRenameModal } from "@/store/use-rename-modal";
 import { useRouter } from "next/navigation";
+import { exportToPdf } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 
 interface ActionsProps {
@@ -92,15 +93,20 @@ export const Actions = ({
             Delete
           </Button>
         </ConfirmModal>
-        <DropdownMenuItem
-          className="p-3 cursor-pointer"
+        <Button
+          variant="ghost"
+          className="p-3 cursor-pointer text-sm w-full justify-start font-normal"
+          onClick={() => exportToPdf(title)}
         >
           <ArrowUpFromLine className="h-4 w-4 mr-2" />
-          Export PDF
-          <Badge className="uppercase text-sm py-1 ml-2" variant="inProgress">
-              Soon
+            Export to PDF
+          <Badge
+            variant="inProgress"
+            className="ml-2"
+          >
+            SOON
           </Badge>
-        </DropdownMenuItem>
+        </Button>          
       </DropdownMenuContent>
     </DropdownMenu>
   );

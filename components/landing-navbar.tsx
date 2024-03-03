@@ -19,7 +19,7 @@ export const LandingNavbar = () => {
                     <main>
                         <MobileSidebar />
                     </main>
-                    <Link href="/dashboard" className="flex items-center mr-3">
+                    <Link href="/" className="flex items-center mr-3">
                         <div className="relative h-12 w-12 mr-4">
                             <Image
                                 fill
