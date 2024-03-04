@@ -22,7 +22,10 @@ export const ConvexClientProvider = ({
     children,
 }: ConvexClientProviderProps) => {
     return (
-        <ClerkProvider>
+        <ClerkProvider
+            afterSignInUrl="/dashboard"
+            afterSignUpUrl="/dashboard"
+        >
             <ConvexProviderWithClerk useAuth={useAuth} client = {convex}>
                 <Authenticated>
                     {children}
