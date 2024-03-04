@@ -86,14 +86,14 @@ const LandingPage = () => {
                 img="/placeholders/landing1.png"
                 side="left"
             />
-            <div className="text-center my-28">
+            <div className="text-center md:my-28">
                 <BlogSection
                     title="Empieza a colaborar hoy." 
                     text="Regístrate gratis y comienza a usar la pizarra online más rápida y fácil de usar."	
                 />
                 <DashboardButton />
             </div>
-            <FaqSection accordionData={faqData}/>
+            <FaqSection accordionData={faqData} sectionTitle="las pizarras online"/>
             <BotNavbar />
         </div>
 

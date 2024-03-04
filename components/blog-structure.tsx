@@ -35,9 +35,9 @@ export const BlogStructure = ({
     );
     
     return (
-        <div className={`text-[#1c1c1e] font-normal pt-28 flex flex-col md:flex-row md:space-x-20 xl:space-x-30 ${img ? "lg:mx-[10%] mx-[5%] items-center md:text-left text-center" : "lg:mx-[25%] md:mx-[15%] mx-[5%] text-center space-y-5"}`}>
-            <div className={cn(`space-y-5 flex-1`, {
-                'text-4xl sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl md:mb-0 mb-5': img,
+        <div className={`text-[#1c1c1e] font-normal pt-20 flex flex-col md:flex-row md:space-x-10 xl:space-x-20 ${img ? "lg:mx-[7%] mx-[5%] items-center md:text-left text-center" : "lg:mx-[25%] md:mx-[15%] mx-[5%] text-center space-y-5"}`}>
+            <div className={cn(`space-y-5 flex-1 justify`, {
+                'text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl md:mb-0 mb-5': img,
                 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl': !img,
             })}>
                 <h1 style={{ lineHeight: "1.2" }}>
@@ -57,7 +57,7 @@ export const BlogStructure = ({
                         }}
                     />
                 </div>
-                <div className="text-sm md:text-xl font-normal text-zinc-800 mx-auto">
+                <div className="text-sm md:text-md xl:text-lg font-normal text-zinc-800 mx-auto">
                     {description}
                 </div>
                 <div>

@@ -16,51 +16,55 @@ import { useUser } from "@clerk/nextjs";
 
 const components: { title: string; href: string}[] = [
     {
-      title: "Gestión de producto",
-      href: "/gestion-producto",
-    },
-    {
       title: "Pizarra Online",
       href: "/pizarra-online",
     },
     {
-      title: "Equipos de Ingeniería",
-      href: "/equipos-de-ingenieria",
+      title: "Diagrama de Flujo",
+      href: "/diagrama-de-flujo",
     },
     {
       title: "Mapa Conceptual",
       href: "/mapa-conceptual",
     },
     {
-      title: "Equipos de IT",
+      title: "Gestión de producto 🚧",
+      href: "/gestion-producto",
+    },
+    {
+      title: "Equipos de Ingeniería 🚧",
+      href: "/equipos-de-ingenieria",
+    },
+    {
+      title: "Equipos de IT 🚧",
       href: "/equipos-de-it",
     },
     {
-      title: "Wireframes",
+      title: "Wireframes 🚧",
       href: "/wireframes",
     },
     {
-      title: "Marketing",
+      title: "Marketing 🚧",
       href: "/marketing",
     },
     {
-      title: "Mapas mentales",
+      title: "Mapas mentales 🚧",
       href: "/mapas-mentales",
     },
     {
-      title: "Agencias y Consultorías",
+      title: "Agencias y Consultorías 🚧",
       href: "/agencias-consultorías",
     },
     {
-      title: "Diseño",
+      title: "Diseño 🚧",
       href: "/diseno",
     },
     {
-      title: "Ventas",
+      title: "Ventas 🚧",
       href: "/ventas",
     },
     {
-      title: "Lluvia de Ideas",
+      title: "Lluvia de Ideas 🚧",
       href: "/lluvia-de-ideas",
     },
   ]

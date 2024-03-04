@@ -13,19 +13,21 @@ interface FaqItem {
   
   interface FaqSectionProps {
     accordionData: FaqItem[];
+    sectionTitle: string;
   }
 
 export const FaqSection = ({
     accordionData,
+    sectionTitle,
 }: FaqSectionProps) => {
     return (
         <>
             <div className="lg:mx-[10%] mx-[5%] my-10 font-normal text-[#1c1c1e]">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl sm:text-left text-center">
-                    Preguntas frecuentes de las pizarras online de Sketchlie
+                    Preguntas frecuentes sobre {sectionTitle}.
                 </h1>
             </div>
-            <Accordion type="single" collapsible className="lg:mx-[10%] sm:mx-[5%] mx-0 text-xl md:text-2xl bg-white p-3 mb-20">
+            <Accordion type="single" collapsible className="lg:mx-[10%] sm:mx-[5%] mx-0 text-xl md:text-2xl bg-white p-3 mb-0 sm:mb-20 rounded-lg">
                 {accordionData.map(item => (
                     <AccordionItem value={item.value} key={item.value}>
                         <AccordionTrigger className="my-3">{item.trigger}</AccordionTrigger>

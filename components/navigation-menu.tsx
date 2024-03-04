@@ -16,50 +16,57 @@ import {
 
 const Name = NAME;
 
-const components: { title: string; href: string}[] = [
+const porEquipo: { title: string; href: string}[] = [
   {
     title: "Gestión de producto 🚧",
     href: "/gestion-producto",
-  },
-  {
-    title: "Pizarra Online",
-    href: "/pizarra-online",
   },
   {
     title: "Equipos de Ingeniería 🚧",
     href: "/equipos-de-ingenieria",
   },
   {
-    title: "Mapa Conceptual ",
-    href: "/mapa-conceptual",
-  },
-  {
     title: "Equipos de IT 🚧",
     href: "/equipos-de-it",
-  },
-  {
-    title: "Wireframes 🚧",
-    href: "/wireframes",
   },
   {
     title: "Marketing 🚧",
     href: "/marketing",
   },
   {
-    title: "Mapas mentales 🚧",
-    href: "/mapas-mentales",
-  },
-  {
     title: "Agencias y Consultorías 🚧",
     href: "/agencias-consultorías",
   },
   {
-    title: "Diseño 🚧",
-    href: "/diseno",
-  },
-  {
     title: "Ventas 🚧",
     href: "/ventas",
+  },
+]
+
+const porCasoDeUso: { title: string; href: string}[] = [
+  {
+    title: "Pizarra Online",
+    href: "/pizarra-online",
+  },
+  {
+    title: "Mapa Conceptual",
+    href: "/mapa-conceptual",
+  },
+  {
+    title: "Diagrama de Flujo",
+    href: "/diagrama-de-flujo",
+  },
+  {
+    title: "Wireframes 🚧",
+    href: "/wireframes",
+  },
+  {
+    title: "Mapas mentales 🚧",
+    href: "/mapas-mentales",
+  },
+  {
+    title: "Diseño 🚧",
+    href: "/diseno",
   },
   {
     title: "Lluvia de Ideas 🚧",
@@ -83,19 +90,33 @@ export function NavigationMenuLanding() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Soluciones</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-10 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              <p className="px-3 text-[13px]">Por equipo</p>
-              <p className="px-3 text-[13px]">Por caso de uso</p>
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
+            <div className="grid w-[400px] gap-3 p-10 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <div>
+                    <p className="px-3 text-[13px] mb-4">Por equipo</p>
+                    <ul>
+                        {porEquipo.map((component) => (
+                            <ListItem
+                                key={component.title}
+                                title={component.title}
+                                href={component.href}
+                            />
+                        ))}
+                    </ul>
+                </div>
+                <div>
+                    <p className="px-3 text-[13px] mb-4">Por caso de uso</p>
+                    <ul>
+                        {porCasoDeUso.map((component) => (
+                            <ListItem
+                                key={component.title}
+                                title={component.title}
+                                href={component.href}
+                            />
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
         <Link href="/blog">

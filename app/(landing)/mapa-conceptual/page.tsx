@@ -56,7 +56,7 @@ const LandingPage = () => {
         <div className="h-full">
             <LandingNavbar />
             <BlogStructure
-                title="La manera más sencilla de crear mapas conceptuales online"
+                title="La manera más fácil de crear mapas conceptuales online"
                 description="Crea mapas conceptuales online de forma gratuita con Sketchlie. Comienza ahora y colabora con tu equipo en el diseño de mapas conceptuales."
                 cta="Crear mapa conceptual"
                 img="/placeholders/landing5.png"
@@ -93,15 +93,14 @@ const LandingPage = () => {
                 img="/placeholders/landing1.png"
                 side="left"
             />
-            <div className="text-center my-28">
+            <div className="text-center lg:my-28 my-14">
                 <BlogSection
                     title="Prueba Sketchlie Gratis Hoy Mismo" 
                     text="Regístrate ahora y empieza a explorar todas las funcionalidades de Sketchlie de forma gratuita. No se requiere tarjeta de crédito. Únete a miles de usuarios satisfechos que han descubierto una nueva forma de colaborar online."
                 />
                 <DashboardButton />
             </div>
-
-            <FaqSection accordionData={faqData} />
+            <FaqSection accordionData={faqData} sectionTitle="un mapa conceptual"/>
             <BotNavbar />
         </div>
 
