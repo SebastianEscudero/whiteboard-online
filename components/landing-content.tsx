@@ -10,7 +10,7 @@ export const LandingContent = () => {
         <div>
             <LogoSlider />
             <LandingVideo />
-            <div className="my-28">
+            <div className="md:my-20 lg:my-28 my-10">
                 <BlogSection 
                     title="Colabora hoy para definir el mañana."
                     text="Con Sketchlie, puedes colaborar con tu equipo en tiempo real, compartir ideas, añadir notas y desarrollar proyectos de forma colaborativa, sin importar su ubicación geográfica. Nuestra pizarra online va más allá al ofrecer una amplia gama de características diseñadas específicamente para potenciar la creatividad y la productividad de los equipos."

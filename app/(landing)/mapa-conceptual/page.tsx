@@ -63,7 +63,7 @@ const LandingPage = () => {
             />
             <LogoSlider />
             <LandingVideo />
-            <div className="my-28">
+            <div className="mb:my-28 my-14">
                 <BlogSection 
                     title="Crea un Mapa Conceptual Online de manera gratuita con Sketchlie" 
                     text="Descubre cómo desatar tu creatividad y potenciar la colaboración en tiempo real con Sketchlie. Nuestra plataforma gratuita de mapas conceptuales te ofrece una forma intuitiva de visualizar ideas, compartir conocimientos y trabajar en proyectos de manera colaborativa. Con Sketchlie, rompe barreras geográficas y colabora sin límites. ¡Empieza a mapear tus ideas hoy mismo!"
