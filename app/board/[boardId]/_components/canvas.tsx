@@ -42,7 +42,6 @@ import { LayerPreview } from "./layer-preview";
 import { SelectionBox } from "./selection-box";
 import { SelectionTools } from "./selection-tools";
 import { CursorsPresence } from "./cursors-presence";
-import { toast } from "sonner";
 import { useProModal } from "@/hooks/use-pro-modal";
 
 const MAX_LAYERS = 100; //max amount of stuff on the whtieboard

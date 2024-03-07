@@ -26,8 +26,8 @@ const routes: { title: string; href: string}[] = [
     href: "/equipos-de-it",
   },
   {
-    title: "Wireframes 🚧",
-    href: "/wireframes",
+    title: "Wireframe",
+    href: "/wireframe",
   },
   {
     title: "Marketing 🚧",

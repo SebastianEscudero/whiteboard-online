@@ -121,7 +121,7 @@ const LandingPage = () => {
                 />
                 <DashboardButton />
             </div>
-            <HowToCreate steps={steps}/>
+            <HowToCreate steps={steps} title="Cómo hacer un diagrama de flujo"/>
             <FaqSection accordionData={faqData} sectionTitle="diagramas de flujo" />
             <BotNavbar />
         </div>

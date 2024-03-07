@@ -57,8 +57,8 @@ const porCasoDeUso: { title: string; href: string}[] = [
     href: "/diagrama-de-flujo",
   },
   {
-    title: "Wireframes 🚧",
-    href: "/wireframes",
+    title: "Wireframe",
+    href: "/wireframe",
   },
   {
     title: "Mapas mentales 🚧",

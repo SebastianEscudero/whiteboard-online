@@ -12,15 +12,17 @@ interface StepItem {
 
 interface BlogSectionProps {
     steps: StepItem[];
+    title: string;
 }
 
 export const HowToCreate = ({
     steps,
+    title,
 }: BlogSectionProps) => {
     return (
         <div className={`bg-[#fff] rounded-lg border border-black lg:mx-[10%] mx-[5%] font-normal text-[#1c1c1e] px-0 xl:px-20`}>
             <h1 className="text-2xl lg:text-3xl xl:text-4xl text-center my-8">
-                Cómo hacer un diagrama de flujo
+                {title}
             </h1>
             <Accordion type="single" collapsible className="bg-white p-3 rounded-lg">
                 {steps.map(item => (
