@@ -10,8 +10,8 @@ import { LandingVideo } from "@/components/landing-video";
 import { HowToCreate } from "@/components/how-to-create";
 
 export const metadata: Metadata = {
-    title: "Creador de diagramas de flujo | Sketchlie",
-    description: "Crea tus diagramas de flujo en línea en minutos con Sketchlie y comienza a colaborar con tu equipo! Con una amplia gama de símbolos y plantillas gratuitas, simplifica tus flujos de trabajo. ¡Regístrate ahora y empieza!"
+    title: "Crea Wireframes online gratis | Sketchlie",
+    description: "Diseña wireframes de aplicaciones y sitios web de manera sencilla utilizando Sketchlie, una herramienta gratuita para crear wireframes. Ideal para equipos que trabajan de forma remota."
 };
 
 const LandingPage = () => {
@@ -82,20 +82,20 @@ const LandingPage = () => {
                 side="right"
             />
             <BlogSection
-                title="Acceso desde cualquier lugar" 
-                text="Tus wireframes guardados en la nube te permiten acceder desde cualquier lugar, en cualquier momento. Nuestro creador de wireframes es compatible con todos los dispositivos. Comienza a diseñar en nuestro plataforma y colabora con tu equipo para asegurar la coherencia y eficacia de tu diseño."
+                title="Descubre la Eficacia de los Wireframes en tu Proyecto de Diseño" 
+                text="Los wireframes son la columna vertebral de cualquier proyecto de diseño. Estos esquemas visuales simplificados son como los cimientos de una casa, proporcionando una estructura sólida sobre la cual construir tu proyecto digital."
                 img="/placeholders/landing3.png"
                 side="left"
             />
             <BlogSection
-                title="Crea Wireframes Online de Forma Intuitiva con Nosotros"
-                text="Descubre cómo crear wireframes de manera intuitiva y colaborativa con nuestra plataforma. Ofrecemos herramientas potentes para visualizar la arquitectura de la información, probar la usabilidad y colaborar con tu equipo en tiempo real. Simplifica el proceso de diseño y desarrollo de tu sitio web con nuestras funciones intuitivas y fáciles de usar. ¡Comienza a diseñar tus wireframes hoy mismo con nosotros!"
+                title="Por qué los Wireframes son Cruciales en el Proceso de Diseño Web"
+                text="Los wireframes son más que simples bocetos. Son herramientas poderosas que te permiten visualizar la arquitectura de tu sitio web antes de sumergirte en el diseño visual. Con ellos, puedes planificar la disposición de los elementos, la navegación del usuario y la jerarquía de la información."
                 img="/placeholders/landing2.png"
                 side="right"
             />
             <BlogSection
-                title="Potencia tus proyectos web" 
-                text="Explora cómo nuestra plataforma puede llevar tus proyectos web a un nuevo nivel. Desde sesiones de brainstorming hasta revisiones de diseño, nuestra herramienta versátil y fácil de usar está diseñada para potenciar la creatividad y la productividad de tu equipo. Únete a la revolución del diseño web colaborativo. ¡Regístrate hoy mismo!"
+                title="Wireframes: El Secreto para una Colaboración Efectiva en Diseño" 
+                text="Los wireframes no solo son para diseñadores. Son herramientas de comunicación efectivas que pueden ayudar a alinear a todo tu equipo, desde diseñadores hasta desarrolladores y clientes. Con wireframes claros y precisos, puedes garantizar que todos estén en la misma página y trabajen hacia un objetivo común."
                 img="/placeholders/landing1.png"
                 side="left"
             />

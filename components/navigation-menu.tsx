@@ -61,8 +61,8 @@ const porCasoDeUso: { title: string; href: string}[] = [
     href: "/wireframe",
   },
   {
-    title: "Mapas mentales 🚧",
-    href: "/mapas-mentales",
+    title: "Mapas mentales",
+    href: "/mapa-mental-online",
   },
   {
     title: "Diseño 🚧",

@@ -34,8 +34,8 @@ const routes: { title: string; href: string}[] = [
     href: "/marketing",
   },
   {
-    title: "Mapas mentales 🚧",
-    href: "/mapas-mentales",
+    title: "Mapas mentales",
+    href: "/mapa-mental-online",
   },
   {
     title: "Agencias y Consultorías 🚧",
