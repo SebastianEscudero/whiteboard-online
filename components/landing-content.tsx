@@ -19,19 +19,19 @@ export const LandingContent = () => {
             <BlogSection 
                 title="Tu próxima gran idea comienza aquí." 
                 text="Te brindamos las herramientas necesarias para diseñar el futuro. Desde estrategia y planificación hasta desarrollo de productos y servicios, todo se simplifica cuando trabajas en un espacio ilimitado como Sketchlie."
-                img="/placeholders/landing1.png"
+                img="/placeholders/car-sales-grafic.png"
                 side="right"
             />
             <BlogSection 
                 title="Desarrolla soluciones a medida para tus clientes."
                 text="Fomenta una cultura centrada en la satisfacción del cliente con un entorno colaborativo donde puedas generar, estructurar y compartir ideas con tu equipo, todo en un mismo lugar." 
-                img="/placeholders/landing2.png"
+                img="/placeholders/prototype-wireframe.png"
                 side="left"
             />
             <BlogSection 
                 title="Conecta toda tu empresa en un espacio seguro."
                 text="La seguridad es nuestra prioridad. Con Sketchlie, puedes estar seguro de que tus datos están protegidos con las más altas medidas de seguridad empresarial."
-                img="/placeholders/landing4.png"
+                img="/placeholders/mapa-mental.png"
                 side="right"
             />
             <BlogTestimonials

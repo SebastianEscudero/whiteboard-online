@@ -14,6 +14,14 @@ const routes: { title: string; href: string}[] = [
     href: "/mapa-conceptual",
   },
   {
+    title: "Diagrama de Flujo",
+    href: "/diagrama-de-flujo",
+  },
+  {
+    title: "Mapeo de procesos",
+    href: "/mapas-de-procesos",
+  },
+  {
     title: "Gestión de producto 🚧",
     href: "/gestion-producto",
   },

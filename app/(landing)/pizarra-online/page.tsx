@@ -65,25 +65,25 @@ const LandingPage = () => {
             <BlogSection 
                 title="La pizarra online para colaborar efectivamente" 
                 text="En el mundo actual, donde la colaboración remota se ha vuelto esencial, contar con herramientas que faciliten el trabajo en equipo y fomenten la creatividad es fundamental."
-                img="/placeholders/landing4.png"
+                img="/placeholders/mapa-mental.png"
                 side="right"
             />
             <BlogSection
                 title="Colaboración en Tiempo Real" 
                 text="Con nuestra pizarra online, los usuarios pueden trabajar juntos en proyectos en tiempo real, lo que permite una comunicación instantánea y una mayor eficiencia en la toma de decisiones."
-                img="/placeholders/landing3.png"
+                img="/placeholders/improve-performance.png"
                 side="left"
             />
             <BlogSection
                 title="Planificación y Gestión de Proyectos" 
                 text="Equipado con funciones de planificación integradas, nuestra pizarra online facilita la organización de tareas, la asignación de responsabilidades y el seguimiento del progreso del proyecto, todo en un solo lugar."
-                img="/placeholders/landing2.png"
+                img="/placeholders/prototype-wireframe.png"
                 side="right"
             />
             <BlogSection
                 title="La pizarra online única Sketchlie." 
                 text="Invita a colegas a tu pizarra online para sesiones de lluvia de ideas, toma de notas y seguimiento de proyectos. Comparte tu pantalla, realiza videoconferencias y aprovecha el modo de presentación para reuniones estimulantes. La rapidez de Sketchlie permite que múltiples usuarios trabajen simultáneamente sin esfuerzo."
-                img="/placeholders/landing1.png"
+                img="/placeholders/car-sales-grafic.png"
                 side="left"
             />
             <div className="text-center md:my-28">

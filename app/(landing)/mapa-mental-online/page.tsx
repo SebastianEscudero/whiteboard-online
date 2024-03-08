@@ -69,7 +69,7 @@ const LandingPage = () => {
                 title="Crea Mapas Mentales Online de Forma Creativa"
                 description="Libera tu imaginación y organiza tus ideas de manera visual con nuestra herramienta para crear mapas mentales en línea. Descubre cómo el diseño de mapas mentales puede potenciar tu creatividad y mejorar tu productividad en proyectos personales y profesionales."
                 cta="Crear mapa mental"
-                img="/placeholders/landing4.png"
+                img="/placeholders/mapa-mental.png"
             />
             <LogoSlider />
             <LandingVideo />
@@ -82,25 +82,25 @@ const LandingPage = () => {
             <BlogSection 
                 title="Explora la creatividad con mapas mentales" 
                 text="Libera tu creatividad y potencia tu pensamiento visual con mapas mentales. Esta técnica te permite representar tus ideas de manera no lineal, fomentando la conexión de conceptos de forma intuitiva y original. Descubre nuevas formas de expresión y resolución de problemas a través de la creación de mapas mentales creativos y estimulantes."
-                img="/placeholders/landing6.png"
+                img="/placeholders/wireframe.png"
                 side="right"
             />
             <BlogSection
                 title="Mapas mentales: el secreto para potenciar tu creatividad" 
                 text="Desbloquea todo tu potencial creativo con el uso de mapas mentales. Desde la generación de ideas hasta la planificación de proyectos, los mapas mentales ofrecen una plataforma versátil para explorar y desarrollar nuevas ideas. Libera tu imaginación y encuentra soluciones innovadoras a través de esta técnica de visualización única."
-                img="/placeholders/landing3.png"
+                img="/placeholders/improve-performance.png"
                 side="left"
             />
             <BlogSection
                 title="Haz tus mapas mentales más fáciles y efectivos"
                 text="Optimiza tu proceso de estudio y organización con mapas mentales simples y efectivos. Simplifica información compleja, identifica relaciones clave y mejora tu comprensión global de los temas. Convierte tus notas y apuntes en mapas mentales claros y concisos, facilitando la revisión y el recuerdo de la información cuando más lo necesitas."
-                img="/placeholders/landing2.png"
+                img="/placeholders/prototype-wireframe.png"
                 side="right"
             />
             <BlogSection
                 title="Simplifica tu vida con mapas mentales intuitivos" 
                 text="Haz que la organización y la planificación sean más simples y eficientes con mapas mentales intuitivos. Desde la gestión de tareas hasta la toma de decisiones, los mapas mentales te ayudan a estructurar la información de manera clara y accesible. Optimiza tu productividad y reduce el estrés utilizando esta herramienta práctica en tu vida diaria."
-                img="/placeholders/landing1.png"
+                img="/placeholders/car-sales-grafic.png"
                 side="left"
             />
             <div className="text-center md:my-28 my-14">

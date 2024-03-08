@@ -79,7 +79,7 @@ const LandingPage = () => {
                 title="Creador de diagramas de flujo online"
                 description="Crea diagramas de flujo rápidamente y simplifica tus rutinas con el creador de diagramas de flujo de Sketchlie. Visualiza los pasos del proceso que estés creando, desde alinear a los equipos hasta pasar a la acción con toda la información."
                 cta="Crear mapa conceptual"
-                img="/placeholders/landing4.png"
+                img="/placeholders/mapa-mental.png"
             />
             <LogoSlider />
             <LandingVideo />
@@ -93,25 +93,25 @@ const LandingPage = () => {
             <BlogSection 
                 title="Diseña tu diagrama de flujo como un profesional" 
                 text="Empieza en minutos con nuestro intuitivo creador de diagramas de flujo. Crea diagramas de lo que necesites, desde sistemas y procesos hasta datos y programas, con nuestro creador de diagramas de flujo. Visualiza sistemas complejos en un solo lugar."
-                img="/placeholders/landing4.png"
+                img="/placeholders/mapa-mental.png"
                 side="right"
             />
             <BlogSection
                 title="Trabaja desde cualquier lugar" 
                 text="Tu flujograma guardado en la nube hace que puedas acceder desde cualquier lugar, en cualquier momento. Nuestro creador de diagramas de flujo es compatible con todos los dispositivos. Comienza trabajando en Sketchlie y desarrolla el proyecto con tu equipo para mejorar la claridad y dar resultados mucho más rápido."
-                img="/placeholders/landing3.png"
+                img="/placeholders/improve-performance.png"
                 side="left"
             />
             <BlogSection
                 title="Crea un Diagrama de Flujo Online de Forma Intuitiva con Sketchlie"
                 text="Descubre cómo crear diagramas de flujo de manera intuitiva y colaborativa con Sketchlie. Nuestra plataforma en línea te ofrece herramientas poderosas para visualizar procesos, organizar información y colaborar con tu equipo en tiempo real. Simplifica la comunicación y la planificación de proyectos con nuestras funciones intuitivas y fáciles de usar. ¡Comienza a mapear tus flujos hoy mismo con Sketchlie!"
-                img="/placeholders/landing2.png"
+                img="/placeholders/prototype-wireframe.png"
                 side="right"
             />
             <BlogSection
                 title="Potencia tus diagramas de flujo" 
                 text="Explora cómo Sketchlie puede llevar la colaboración a un nivel completamente nuevo. Desde sesiones de lluvia de ideas hasta reuniones de seguimiento de proyectos, esta herramienta versátil y fácil de usar está diseñada para potenciar la creatividad y la productividad de tu equipo. Únete a la revolución de la colaboración online. ¡Regístrate hoy mismo!"
-                img="/placeholders/landing1.png"
+                img="/placeholders/car-sales-grafic.png"
                 side="left"
             />
             <div className="text-center md:my-28 my-14">

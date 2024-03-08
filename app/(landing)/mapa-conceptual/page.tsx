@@ -59,7 +59,7 @@ const LandingPage = () => {
                 title="La manera más fácil de crear mapas conceptuales online"
                 description="Crea mapas conceptuales online de forma gratuita con Sketchlie. Comienza ahora y colabora con tu equipo en el diseño de mapas conceptuales."
                 cta="Crear mapa conceptual"
-                img="/placeholders/landing5.png"
+                img="/placeholders/mapa-conceptual.png"
             />
             <LogoSlider />
             <LandingVideo />
@@ -72,25 +72,25 @@ const LandingPage = () => {
             <BlogSection 
                 title="Facilitando la Colaboración Remota con Mapas Conceptuales" 
                 text="En un mundo cada vez más conectado, la colaboración remota se ha vuelto esencial. Descubre cómo los mapas conceptuales online pueden facilitar la comunicación, la planificación y la ejecución de proyectos, permitiendo a equipos dispersos trabajar de manera efectiva hacia objetivos comunes."
-                img="/placeholders/landing4.png"
+                img="/placeholders/mapa-mental.png"
                 side="right"
             />
             <BlogSection
                 title="Potenciando la Creatividad Colectiva" 
                 text="Con Sketchlie, la colaboración en tiempo real se convierte en una experiencia fluida y dinámica. Imagina poder trabajar simultáneamente en un mapa conceptual con colegas de todo el mundo, intercambiando ideas y generando nuevas perspectivas en tiempo real. Descubre cómo esta herramienta puede transformar la forma en que trabajas."
-                img="/placeholders/landing3.png"
+                img="/placeholders/improve-performance.png"
                 side="left"
             />
             <BlogSection
                 title="Desde la Idea hasta la Ejecución" 
                 text="Explora cómo Sketchlie simplifica la planificación y gestión de proyectos, proporcionando una plataforma centralizada para organizar tareas, asignar responsabilidades y realizar un seguimiento del progreso. Con herramientas integradas para la colaboración y la comunicación, llevar tus proyectos desde la concepción hasta la ejecución nunca ha sido tan fácil."
-                img="/placeholders/landing2.png"
+                img="/placeholders/prototype-wireframe.png"
                 side="right"
             />
             <BlogSection
                 title="Tu Herramienta Esencial para la Creatividad Colaborativa" 
                 text="Descubre cómo Sketchlie puede llevar la colaboración a un nivel completamente nuevo. Desde sesiones de lluvia de ideas hasta reuniones de seguimiento de proyectos, esta herramienta versátil y fácil de usar está diseñada para potenciar la creatividad y la productividad de tu equipo. Únete a la revolución de la colaboración online con Sketchlie."
-                img="/placeholders/landing1.png"
+                img="/placeholders/car-sales-grafic.png"
                 side="left"
             />
             <div className="text-center lg:my-28 my-14">

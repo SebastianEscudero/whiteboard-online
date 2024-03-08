@@ -28,6 +28,10 @@ const components: { title: string; href: string}[] = [
       href: "/mapa-conceptual",
     },
     {
+      title: "Mapeo de procesos",
+      href: "/mapas-de-procesos",
+    },
+    {
       title: "Gestión de producto 🚧",
       href: "/gestion-producto",
     },
