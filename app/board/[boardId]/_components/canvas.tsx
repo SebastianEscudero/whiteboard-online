@@ -60,6 +60,9 @@ export const Canvas = ({
   const proModal = useProModal();
   const layerIds = useStorage((root) => root.layerIds);
 
+  const [copiedLayers, setCopiedLayers] = useState<Map<string, LiveObject<any>>>(new Map());
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }); 
+
   const pencilDraft = useSelf((me) => me.presence.pencilDraft);
   const [canvasState, setCanvasState] = useState<CanvasState>({
     mode: CanvasMode.None,
@@ -495,32 +498,6 @@ export const Canvas = ({
 
   const deleteLayers = useDeleteLayers();
 
-  useEffect(() => {
-    function onKeyDown(e: KeyboardEvent) {
-      switch (e.key) {
-        // case "Backspace":
-        //   deleteLayers();
-        //   break;
-        case "z": {
-          if (e.ctrlKey || e.metaKey) {
-            if (e.shiftKey) {
-              history.redo();
-            } else {
-              history.undo();
-            }
-            break;
-          }
-        }
-      }
-    }
-
-    document.addEventListener("keydown", onKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", onKeyDown)
-    }
-  }, [deleteLayers, history]);
-
   // useEffect(() => {
   //   const handlePaste = (event: any) => {
   //     const centerX = window.innerWidth / 2;
@@ -548,6 +525,106 @@ export const Canvas = ({
   //     window.removeEventListener('paste', handlePaste);
   //   };
   // }, [insertImage, camera]);
+
+// Add a new state variable to hold the copied layers
+
+  // Function to copy selected layers
+  const copySelectedLayers = useMutation(({ storage, self }) => {
+    const liveLayers = storage.get("layers");
+    const copied = new Map();
+    for (const id of self.presence.selection) {
+      const layer = liveLayers.get(id);
+      if (layer) {
+        // Use the clone method provided by the LiveObject class
+        copied.set(id, layer.clone());
+      }
+    }
+    setCopiedLayers(copied);
+  }, []);
+
+  const pasteCopiedLayers = useMutation(({ storage, setMyPresence }, mousePosition) => {
+    const liveLayers = storage.get("layers");
+    const liveLayerIds = storage.get("layerIds");
+  
+    if (copiedLayers.size + liveLayers.size > MAX_LAYERS) {
+      proModal.onOpen();
+      return;
+    }
+  
+    // Find the top-left corner of the copied layers
+    let minX = Infinity;
+    let minY = Infinity;
+    for (const layer of Array.from(copiedLayers.values())) {
+      minX = Math.min(minX, layer.get("x"));
+      minY = Math.min(minY, layer.get("y"));
+    }
+  
+    // Calculate the offset from the mouse position
+    const offsetX = mousePosition.x - minX;
+    const offsetY = mousePosition.y - minY;
+  
+    const newSelection = [];
+    for (const [id, layer] of Array.from(copiedLayers.entries())) {
+      const newId = nanoid();
+      newSelection.push(newId);
+      liveLayerIds.push(newId);
+      const clonedLayer = layer.clone();
+      clonedLayer.set("x", clonedLayer.get("x") + offsetX); // Adjust x position
+      clonedLayer.set("y", clonedLayer.get("y") + offsetY); // Adjust y position
+      liveLayers.set(newId, clonedLayer);
+    }
+    setMyPresence({ selection: newSelection }, { addToHistory: true });
+  }, [copiedLayers]);
+
+  useEffect(() => {
+    function onPointerMove(e: PointerEvent) {
+      setMousePosition({ 
+        x: Math.round(e.clientX) - camera.x,
+        y: Math.round(e.clientY) - camera.y,
+       });
+    }
+  
+    document.addEventListener("pointermove", onPointerMove);
+  
+    return () => {
+      document.removeEventListener("pointermove", onPointerMove);
+    };
+  }, [camera, mousePosition, setMousePosition]);
+
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      switch (e.key.toLocaleLowerCase()) {
+        case "c": {
+          if (e.ctrlKey || e.metaKey) {
+            copySelectedLayers();
+          }
+          break;
+        }
+        case "v": {
+          if (e.ctrlKey || e.metaKey) {
+            pasteCopiedLayers(mousePosition);
+          }
+          break;
+        }
+        case "z": {
+          if (e.ctrlKey || e.metaKey) {
+            if (e.shiftKey) {
+              history.redo();
+            } else {
+              history.undo();
+            }
+            break;
+          }
+        }
+      }
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown)
+    }
+  }, [copySelectedLayers, pasteCopiedLayers, deleteLayers, history, mousePosition]);
 
   return (
     <main
