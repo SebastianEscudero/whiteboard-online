@@ -8,6 +8,7 @@ import { LogoSlider } from "@/components/logo-slider";
 import { FaqSection } from "@/components/faq-section";
 import { LandingVideo } from "@/components/landing-video";
 import { HowToCreate } from "@/components/how-to-create";
+import { BlogLinks } from "@/components/blog-links";
 
 export const metadata: Metadata = {
     title: "Creador de diagramas de flujo | Sketchlie",
@@ -120,6 +121,11 @@ const LandingPage = () => {
                     text="Regístrate ahora y empieza a explorar todas las funcionalidades de Sketchlie de forma gratuita. No se requiere tarjeta de crédito. Únete a miles de usuarios satisfechos que han descubierto una nueva forma de colaborar online."
                 />
                 <DashboardButton />
+            </div>
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:mx-[10%] mx-[5%]">
+                <BlogLinks blogTitle="Mapa Conceptual Online" blogImage="/placeholders/mapa-conceptual.png" blogHref="/mapa-conceptual" blogDescription="Descubre cómo desatar tu creatividad y potenciar la colaboración en tiempo real con Sketchlie."/>
+                <BlogLinks blogTitle="Mapa de Procesos" blogImage="/placeholders/mapa-de-procesos.png" blogHref="/mapas-de-procesos" blogDescription="El mapa de procesos ayuda a los equipos a mapear y implementar mejoras. Registrate hoy con una 3 espacios de trabajo gratuitos para empezar a utilizar la mejor herramienta de mapa de procesos."/>
+                <BlogLinks blogTitle="Wireframes" blogImage="/placeholders/wireframe.png" blogHref="/wireframe" blogDescription="Empieza a visualizar tus ideas en minutos con nuestro intuitivo creador de wireframes. Crea esquemas de lo que necesites, desde páginas de inicio hasta formularios y menús, con nuestro creador de wireframes. "/>
             </div>
             <HowToCreate steps={steps} title="Cómo hacer un diagrama de flujo"/>
             <FaqSection accordionData={faqData} sectionTitle="diagramas de flujo" />
