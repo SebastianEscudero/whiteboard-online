@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   keywords: ["sketchlie", "sketch", "collaboration", "workspace", "design", "ui", "ux", "prototyping", "wireframes", "mockups", "design system", "design tool", "design collaboration", "design collaboration tool", "design collaboration platform", "design collaboration software", "design collaboration app", "design collaboration website", "design collaboration web app", "design collaboration web platform", "design collaboration web software", "design collaboration web tool", "design collaboration web site", "design collaboration web application", "design collaboration web page", "design collaboration web service", "design collaboration web solution", "design collaboration web utility", "design collaboration web product", "design collaboration web system"],
   alternates: {
     canonical: "https://www.sketchlie.com",
-  }
+  },
 };
 
 export default function RootLayout({

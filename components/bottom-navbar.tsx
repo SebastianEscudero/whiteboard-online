@@ -80,9 +80,9 @@ export const BotNavbar = () => {
         <footer className="bg-[#1C1C1E] text-white">
             <div className="py-10">
                 <div className="text-center mt-10 mx-[5%] lg:mx-[30%]">
-                    <h1 className="lg:text-5xl mb-8 md:text-4xl text-xl">
+                    <h2 className="lg:text-5xl mb-8 md:text-4xl text-xl">
                         Únete a los 1000+ de usuarios de Sketchlie hoy mismo.
-                    </h1>
+                    </h2>
                     <p>
                         Sé parte de la comunidad que impulsa la innovación y la colaboración con Sketchlie. Regístrate ahora con tu correo electrónico laboral y comienza a transformar tus ideas en realidad.
                     </p>

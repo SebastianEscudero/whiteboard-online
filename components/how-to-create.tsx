@@ -21,9 +21,9 @@ export const HowToCreate = ({
 }: BlogSectionProps) => {
     return (
         <div className={`bg-[#fff] rounded-lg border border-black lg:mx-[10%] mx-[5%] font-normal text-[#1c1c1e] px-0 xl:px-20 xl:py-15 py-5`}>
-            <h1 className="text-2xl lg:text-3xl xl:text-4xl text-center my-8">
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl text-center my-8">
                 {title}
-            </h1>
+            </h2>
             <Accordion type="single" collapsible className="bg-white p-5 rounded-lg">
                 {steps.map(item => (
                     <AccordionItem value={item.trigger} key={item.trigger}>

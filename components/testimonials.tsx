@@ -4,46 +4,44 @@ import {
     CarouselContent,
     CarouselItem,
   } from "@/components/ui/carousel";
-import { NAME } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 
-const name = NAME;
 const testimonials = [
     {
         name: "Maximilian Smith",
         avatar: "M",
         title: "CRM Manager",
-        description: `"${name} is awesome!. It helps me enhance the overall editing process and collaborate with my team in real time."`
+        description: `"Sketchlie is awesome!. It helps me enhance the overall editing process and collaborate with my team in real time."`
     },
     {
         name: "Paula Verastegui",
         avatar: "P",
         title: "Teacher",
-        description: `"${name} is a great tool for educators. It helps me create engaging and interactive lessons for my students."`
+        description: `"Sketchlie is a great tool for educators. It helps me create engaging and interactive lessons for my students."`
     },
     {
         name: "Matheus Kasakoff",
         avatar: "M",
         title: "Student",
-        description: `"${name} is a game-changer for me. It helps me understand complex concepts and solve problems in a fun and interactive way."`
+        description: `"Sketchlie is a game-changer for me. It helps me understand complex concepts and solve problems in a fun and interactive way."`
     },
     {
         name: "Sebastián Kopp",
         avatar: "S",
         title: "Designer",
-        description: `"I love using ${name} to create and share my ideas and projects in real time. It is a great tool for professionals and students."`
+        description: `"I love using Sketchlie to create and share my ideas and projects in real time. It is a great tool for professionals and students."`
     },
     {
         name: "Mariana Sánchez",
         avatar: "M",
         title: "Engineer",
-        description: `"${name} is an invaluable resource for professionals. It streamlines my workflow and fosters effective team collaboration."`
+        description: `"Sketchlie is an invaluable resource for professionals. It streamlines my workflow and fosters effective team collaboration."`
     },
     {
         name: "Javier Pérez",
         avatar: "J",
         title: "Developer",
-        description: `"I use ${name} to create and share my projects with my team. It is a great tool for developers and designers."`
+        description: `"I use Sketchlie to create and share my projects with my team. It is a great tool for developers and designers."`
     }
 ]
 

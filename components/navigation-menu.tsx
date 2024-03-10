@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 
-import { NAME, cn } from "@/lib/utils"
+import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,8 +13,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-
-const Name = NAME;
 
 const porEquipo: { title: string; href: string}[] = [
   {
@@ -83,11 +81,11 @@ export function NavigationMenuLanding() {
     <NavigationMenu className="hidden xl:flex xl:flex-col">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>¿Qué es {Name}</NavigationMenuTrigger>
+          <NavigationMenuTrigger>¿Qué es Sketchlie</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-8 md:w-[500px] lg:w-[300px]">
               <p className="px-3 text-[13px]">Producto</p>
-              <ListItem href="/product-overview" title={`Descripción de ${Name} 🚧`}/>
+              <ListItem href="/product-overview" title="Descripción de Sketchlie 🚧"/>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

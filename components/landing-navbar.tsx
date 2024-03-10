@@ -1,6 +1,5 @@
 "use client";
 
-import { NAME } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -10,7 +9,6 @@ import { useUser } from "@clerk/nextjs";
 
 export const LandingNavbar = () => {
     const { user } = useUser();
-    const Name = NAME;
 
     return (
         <nav className="py-4 bg-[#FFFFFF] border">
@@ -28,7 +26,7 @@ export const LandingNavbar = () => {
                             />
                         </div>
                         <h1 className="text-2xl font-bold text-[#38322C] font-roobert">
-                            {Name}
+                            Sketchlie
                         </h1>
                     </Link>
                     <NavigationMenuLanding />

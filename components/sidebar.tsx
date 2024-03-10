@@ -1,4 +1,3 @@
-import { NAME } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -65,7 +64,6 @@ const routes: { title: string; href: string}[] = [
 
 const Sidebar = () => {
   const { user } = useUser();
-  const Name = NAME;
   return ( 
       <div className="space-y-4 py-4 flex flex-col h-full bg-[#FFF] text-black overflow-y-auto">
           <div className="px-3 flex-1">
@@ -78,7 +76,7 @@ const Sidebar = () => {
                       src="/logo.svg"    
                   />
                   <h1 className="text-2xl text-[#38322C] font-roobert">
-                      {Name}
+                      Sketchlie
                   </h1>
               </div>
               <div className="space-y-1">

@@ -28,9 +28,9 @@ export const BlogLinks = ({
                     layout="responsive"
                 />
                 <div className="p-5 bg-[#FFF] rounded-md md:h-[300px] lg:h-[350px] xl:h-[300px] 2xl:h-[250px]">
-                    <p className="mb-5">
+                    <h2 className="mb-5">
                         <strong>{blogTitle}</strong>
-                    </p>
+                    </h2>
                     <p className="h-[75%] sm:h-[70%] md:h-[75%] lg:h-[70%] md:mb-0 mb-5">
                         {blogDescription}
                     </p>
