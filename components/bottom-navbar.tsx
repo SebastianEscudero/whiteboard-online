@@ -13,6 +13,7 @@ import {
 import { LogoSlider } from "./logo-slider";
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
+import { PlatformYouCanTrust } from "./platform-you-can-trust";
 
 const components: { title: string; href: string}[] = [
     {
@@ -87,10 +88,10 @@ export const BotNavbar = () => {
                         Sé parte de la comunidad que impulsa la innovación y la colaboración con Sketchlie. Regístrate ahora con tu correo electrónico laboral y comienza a transformar tus ideas en realidad.
                     </p>
                     <Link href={"/dashboard"}>
-                      <Button variant="outline" className="mt-10">
+                      <Button variant="outline" className="text-lg p-6 font-normal mt-10">
                           {user ? "Ir al Tablero" : "Regístrate gratis"}
                       </Button>
-                  </Link>
+                    </Link>
                 </div>
                 <LogoSlider />
                 <Accordion type="single" collapsible className="lg:mx-[10%] sm:mx-[5%] mx-0 text-lg">
@@ -126,7 +127,7 @@ export const BotNavbar = () => {
                             className="py-5 text-lg hover:underline ml-5"
                             href="/blog"
                         >
-                            Blog
+                            Blog 🚧 
                         </Link>
                     </div>
                     <div className="py-4 text-lg border-b font-medium">
@@ -134,7 +135,7 @@ export const BotNavbar = () => {
                             className="py-5 text-lg hover:underline ml-5"
                             href="/precios"
                         >
-                            Precios
+                            Precios 🚧
                         </Link>
                     </div>
                 </Accordion>

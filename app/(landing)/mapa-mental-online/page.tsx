@@ -3,16 +3,17 @@ import { BotNavbar } from "@/components/bottom-navbar";
 import { BlogStructure } from "@/components/blog-structure";
 import { Metadata } from "next";
 import { BlogSection } from "@/components/blog-section";
-import { DashboardButton } from "@/components/register-button";
 import { LogoSlider } from "@/components/logo-slider";
 import { FaqSection } from "@/components/faq-section";
 import { LandingVideo } from "@/components/landing-video";
 import { HowToCreate } from "@/components/how-to-create";
 import { BlogLinks } from "@/components/blog-links";
+import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 
 export const metadata: Metadata = {
     title: "Crea un Mapa Conceptual online gratis | Sketchlie",
     description: "Libera tu imaginación. Diseña mapas mentales en línea. Crea fácilmente un mapa mental con nuestra herramienta de mapas mentales. ¡Prueba el plan gratuito o elige Pro!",
+    keywords: ["mapa mental", "mapa mental online", "mapa mental gratis"]
 };
 
 const LandingPage = () => {
@@ -90,7 +91,7 @@ const LandingPage = () => {
                 title="Mapas mentales: el secreto para potenciar tu creatividad" 
                 text="Desbloquea todo tu potencial creativo con el uso de mapas mentales. Desde la generación de ideas hasta la planificación de proyectos, los mapas mentales ofrecen una plataforma versátil para explorar y desarrollar nuevas ideas. Libera tu imaginación y encuentra soluciones innovadoras a través de esta técnica de visualización única."
                 img="/placeholders/improve-performance.png"
-                side="left"
+                side="right"
             />
             <BlogSection
                 title="Haz tus mapas mentales más fáciles y efectivos"
@@ -102,14 +103,10 @@ const LandingPage = () => {
                 title="Simplifica tu vida con mapas mentales intuitivos" 
                 text="Haz que la organización y la planificación sean más simples y eficientes con mapas mentales intuitivos. Desde la gestión de tareas hasta la toma de decisiones, los mapas mentales te ayudan a estructurar la información de manera clara y accesible. Optimiza tu productividad y reduce el estrés utilizando esta herramienta práctica en tu vida diaria."
                 img="/placeholders/car-sales-grafic.png"
-                side="left"
+                side="right"
             />
-            <div className="text-center md:my-28 my-14">
-                <BlogSection
-                    title="Prueba Nuestra Plataforma Gratis Hoy Mismo" 
-                    text="Regístrate ahora y comienza a explorar todas las funcionalidades de nuestra plataforma de mapas mentales de forma gratuita. No se requiere tarjeta de crédito. Únete a miles de usuarios satisfechos que han descubierto una nueva forma de organizar y potenciar sus ideas de manera visual."
-                />
-                <DashboardButton />
+            <div className="my-20">
+                <PlatformYouCanTrust/>
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:mx-[10%] mx-[5%]">
                 <BlogLinks blogTitle="Mapa Conceptual Online" blogImage="/placeholders/mapa-mental.png" blogHref="/mapa-conceptual" blogDescription="Descubre cómo desatar tu creatividad y potenciar la colaboración en tiempo real con Sketchlie."/>

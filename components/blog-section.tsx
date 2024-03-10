@@ -32,7 +32,7 @@ export const BlogSection = ({
             <div className="flex-1">
                 <h1 className={cn("mb-10 leading-snug space-y-5", {
                     'text-2xl sm:text-3xl lg:text-4xl': text && img,
-                    'text-3xl sm:text-4xl lg:text-5xl lg:mx-[15%] mx-[2%]': !img 
+                    'text-3xl sm:text-4xl lg:text-5xl lg:mx-[20%] mx-[2%]': !img 
                 })} style={{ lineHeight: "1.2" }}>
                     {title}
                 </h1>

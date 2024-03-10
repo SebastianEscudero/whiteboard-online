@@ -12,7 +12,7 @@ import { ProModalProvider } from "@/providers/max-layers-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "La pizarra online para colaborar | Sketchlie",
+  title: "El Espacio de Trabajo para Colaborar | Sketchlie",
   description: "Sketchlie es una plataforma intuitiva y colaborativa que transforma la manera en que gestionas tus proyectos. Una espacio de trabajo que permite visualizar tus ideas, estructurar sistemas complejos y organizar tu trabajo de manera eficiente",
 };
 

@@ -3,16 +3,17 @@ import { BotNavbar } from "@/components/bottom-navbar";
 import { BlogStructure } from "@/components/blog-structure";
 import { Metadata } from "next";
 import { BlogSection } from "@/components/blog-section";
-import { DashboardButton } from "@/components/register-button";
 import { LogoSlider } from "@/components/logo-slider";
 import { FaqSection } from "@/components/faq-section";
 import { LandingVideo } from "@/components/landing-video";
 import { HowToCreate } from "@/components/how-to-create";
 import { BlogLinks } from "@/components/blog-links";
+import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 
 export const metadata: Metadata = {
     title: "Crea Wireframes online gratis | Sketchlie",
-    description: "Diseña wireframes de aplicaciones y sitios web de manera sencilla utilizando Sketchlie, una herramienta gratuita para crear wireframes. Ideal para equipos que trabajan de forma remota."
+    description: "Diseña wireframes de aplicaciones y sitios web de manera sencilla utilizando Sketchlie, una herramienta gratuita para crear wireframes. Ideal para equipos que trabajan de forma remota.",
+    keywords: ["wireframes", "wireframes online", "wireframes gratis"]
 };
 
 const LandingPage = () => {
@@ -86,7 +87,7 @@ const LandingPage = () => {
                 title="Descubre la Eficacia de los Wireframes en tu Proyecto de Diseño" 
                 text="Los wireframes son la columna vertebral de cualquier proyecto de diseño. Estos esquemas visuales simplificados son como los cimientos de una casa, proporcionando una estructura sólida sobre la cual construir tu proyecto digital."
                 img="/placeholders/improve-performance.png"
-                side="left"
+                side="right"
             />
             <BlogSection
                 title="Por qué los Wireframes son Cruciales en el Proceso de Diseño Web"
@@ -98,14 +99,10 @@ const LandingPage = () => {
                 title="Wireframes: El Secreto para una Colaboración Efectiva en Diseño" 
                 text="Los wireframes no solo son para diseñadores. Son herramientas de comunicación efectivas que pueden ayudar a alinear a todo tu equipo, desde diseñadores hasta desarrolladores y clientes. Con wireframes claros y precisos, puedes garantizar que todos estén en la misma página y trabajen hacia un objetivo común."
                 img="/placeholders/car-sales-grafic.png"
-                side="left"
+                side="right"
             />
-            <div className="text-center md:my-28 my-14">
-                <BlogSection
-                    title="Prueba Nuestra Plataforma Gratis Hoy Mismo" 
-                    text="Regístrate ahora y comienza a explorar todas las funcionalidades de nuestra plataforma de wireframes de forma gratuita. No se requiere tarjeta de crédito. Únete a miles de usuarios satisfechos que han descubierto una nueva forma de diseñar proyectos web de manera eficiente."
-                />
-                <DashboardButton />
+            <div className="my-20">
+                <PlatformYouCanTrust/>
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:mx-[10%] mx-[5%]">
                 <BlogLinks blogTitle="Mapa Conceptual Online" blogImage="/placeholders/mapa-conceptual.png" blogHref="/mapa-conceptual" blogDescription="Descubre cómo desatar tu creatividad y potenciar la colaboración en tiempo real con Sketchlie."/>

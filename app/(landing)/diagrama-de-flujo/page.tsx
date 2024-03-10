@@ -3,16 +3,17 @@ import { BotNavbar } from "@/components/bottom-navbar";
 import { BlogStructure } from "@/components/blog-structure";
 import { Metadata } from "next";
 import { BlogSection } from "@/components/blog-section";
-import { DashboardButton } from "@/components/register-button";
 import { LogoSlider } from "@/components/logo-slider";
 import { FaqSection } from "@/components/faq-section";
 import { LandingVideo } from "@/components/landing-video";
 import { HowToCreate } from "@/components/how-to-create";
 import { BlogLinks } from "@/components/blog-links";
+import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 
 export const metadata: Metadata = {
     title: "Creador de Diagramas de Flujo | Sketchlie",
-    description: "Crea tus diagramas de flujo en línea en minutos con Sketchlie y comienza a colaborar con tu equipo! Con una amplia gama de símbolos y plantillas gratuitas, simplifica tus flujos de trabajo. ¡Regístrate ahora y empieza!"
+    description: "Crea tus diagramas de flujo en línea en minutos con Sketchlie y comienza a colaborar con tu equipo! Con una amplia gama de símbolos y plantillas gratuitas, simplifica tus flujos de trabajo. ¡Regístrate ahora y empieza!",
+    keywords: ["diagrama de flujo", "diagrama de flujo online", "diagrama de flujo gratis"]
 };
 
 const LandingPage = () => {
@@ -101,7 +102,7 @@ const LandingPage = () => {
                 title="Trabaja desde cualquier lugar" 
                 text="Tu flujograma guardado en la nube hace que puedas acceder desde cualquier lugar, en cualquier momento. Nuestro creador de diagramas de flujo es compatible con todos los dispositivos. Comienza trabajando en Sketchlie y desarrolla el proyecto con tu equipo para mejorar la claridad y dar resultados mucho más rápido."
                 img="/placeholders/improve-performance.png"
-                side="left"
+                side="right"
             />
             <BlogSection
                 title="Crea un Diagrama de Flujo Online de Forma Intuitiva con Sketchlie"
@@ -113,14 +114,10 @@ const LandingPage = () => {
                 title="Potencia tus diagramas de flujo" 
                 text="Explora cómo Sketchlie puede llevar la colaboración a un nivel completamente nuevo. Desde sesiones de lluvia de ideas hasta reuniones de seguimiento de proyectos, esta herramienta versátil y fácil de usar está diseñada para potenciar la creatividad y la productividad de tu equipo. Únete a la revolución de la colaboración online. ¡Regístrate hoy mismo!"
                 img="/placeholders/car-sales-grafic.png"
-                side="left"
+                side="right"
             />
-            <div className="text-center md:my-28 my-14">
-                <BlogSection
-                    title="Prueba Sketchlie Gratis Hoy Mismo" 
-                    text="Regístrate ahora y empieza a explorar todas las funcionalidades de Sketchlie de forma gratuita. No se requiere tarjeta de crédito. Únete a miles de usuarios satisfechos que han descubierto una nueva forma de colaborar online."
-                />
-                <DashboardButton />
+            <div className="my-20">
+                <PlatformYouCanTrust/>
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:mx-[10%] mx-[5%]">
                 <BlogLinks blogTitle="Mapa Conceptual Online" blogImage="/placeholders/mapa-conceptual.png" blogHref="/mapa-conceptual" blogDescription="Descubre cómo desatar tu creatividad y potenciar la colaboración en tiempo real con Sketchlie."/>

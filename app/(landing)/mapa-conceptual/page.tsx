@@ -3,15 +3,16 @@ import { BotNavbar } from "@/components/bottom-navbar";
 import { BlogStructure } from "@/components/blog-structure";
 import { Metadata } from "next";
 import { BlogSection } from "@/components/blog-section";
-import { DashboardButton } from "@/components/register-button";
 import { LogoSlider } from "@/components/logo-slider";
 import { FaqSection } from "@/components/faq-section";
 import { LandingVideo } from "@/components/landing-video";
 import { BlogLinks } from "@/components/blog-links";
+import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 
 export const metadata: Metadata = {
     title: "Crea un Mapa Conceptual online gratis | Sketchlie",
     description: "Crea mapas conceptuales online de forma gratuita con Sketchlie. Comienza ahora y colabora con tu equipo en el diseño de mapas conceptuales.",
+    keywords: ["mapa conceptual", "mapa conceptual online", "mapa conceptual gratis"]
 };
 
 const LandingPage = () => {
@@ -80,7 +81,7 @@ const LandingPage = () => {
                 title="Potenciando la Creatividad Colectiva" 
                 text="Con Sketchlie, la colaboración en tiempo real se convierte en una experiencia fluida y dinámica. Imagina poder trabajar simultáneamente en un mapa conceptual con colegas de todo el mundo, intercambiando ideas y generando nuevas perspectivas en tiempo real. Descubre cómo esta herramienta puede transformar la forma en que trabajas."
                 img="/placeholders/improve-performance.png"
-                side="left"
+                side="right"
             />
             <BlogSection
                 title="Desde la Idea hasta la Ejecución" 
@@ -92,14 +93,10 @@ const LandingPage = () => {
                 title="Tu Herramienta Esencial para la Creatividad Colaborativa" 
                 text="Descubre cómo Sketchlie puede llevar la colaboración a un nivel completamente nuevo. Desde sesiones de lluvia de ideas hasta reuniones de seguimiento de proyectos, esta herramienta versátil y fácil de usar está diseñada para potenciar la creatividad y la productividad de tu equipo. Únete a la revolución de la colaboración online con Sketchlie."
                 img="/placeholders/car-sales-grafic.png"
-                side="left"
+                side="right"
             />
-            <div className="text-center lg:my-28 my-14">
-                <BlogSection
-                    title="Prueba Sketchlie Gratis Hoy Mismo" 
-                    text="Regístrate ahora y empieza a explorar todas las funcionalidades de Sketchlie de forma gratuita. No se requiere tarjeta de crédito. Únete a miles de usuarios satisfechos que han descubierto una nueva forma de colaborar online."
-                />
-                <DashboardButton />
+            <div className="my-20">
+                <PlatformYouCanTrust/>
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:mx-[10%] mx-[5%]">
                 <BlogLinks blogTitle="Diagramas de flujo" blogImage="/placeholders/mapa-conceptual.png" blogHref="/diagrama-de-flujo" blogDescription="Crea diagramas de flujo rápidamente y simplifica tus rutinas con el creador de diagramas de flujo de  con las herramientas de Sketchlie."/>

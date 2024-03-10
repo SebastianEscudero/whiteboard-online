@@ -3,16 +3,17 @@ import { BotNavbar } from "@/components/bottom-navbar";
 import { BlogStructure } from "@/components/blog-structure";
 import { Metadata } from "next";
 import { BlogSection } from "@/components/blog-section";
-import { DashboardButton } from "@/components/register-button";
 import { LogoSlider } from "@/components/logo-slider";
 import { FaqSection } from "@/components/faq-section";
 import { LandingVideo } from "@/components/landing-video";
 import { HowToCreate } from "@/components/how-to-create";
 import { BlogLinks } from "@/components/blog-links";
+import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 
 export const metadata: Metadata = {
     title: "La herramienta de Mapa de Procesos | Sketchlie",
     description: "El mapa de procesos ayuda a los equipos a mapear y implementar mejoras. Registrate hoy con una 3 espacios de trabajo gratuitos para empezar a utilizar la mejor herramienta de mapa de procesos. Empieza hoy gratis.",
+    keywords: ["mapa de procesos", "mapa de procesos online", "mapa de procesos gratis"]
 };
 
 const LandingPage = () => {
@@ -93,7 +94,7 @@ const LandingPage = () => {
                 title="Reduce errores y minimiza riesgos" 
                 text="Al visualizar tus procesos, puedes identificar fácilmente posibles puntos de error y tomar medidas preventivas para mitigar riesgos. La claridad proporcionada por los mapas de procesos ayuda a minimizar los errores y garantiza una ejecución más fluida y precisa de las tareas."
                 img="/placeholders/improve-performance.png"
-                side="left"
+                side="right"
             />
             <BlogSection
                 title="Impulsa la innovación y la mejora continua"
@@ -105,14 +106,10 @@ const LandingPage = () => {
                 title="Maximiza la productividad del equipo" 
                 text="Al simplificar y optimizar tus flujos de trabajo mediante mapas de procesos, puedes aumentar la productividad de tu equipo. Elimina la confusión y la redundancia, permitiendo que tus empleados se centren en tareas de mayor valor añadido y alcancen sus metas con mayor rapidez."
                 img="/placeholders/car-sales-grafic.png"
-                side="left"
+                side="right"
             />
-            <div className="text-center md:my-28 my-14">
-                <BlogSection
-                    title="Prueba Nuestra Plataforma Gratis Hoy Mismo" 
-                    text="Regístrate ahora y comienza a explorar todas las funcionalidades de nuestra plataforma de mapas mentales de forma gratuita. No se requiere tarjeta de crédito. Únete a miles de usuarios satisfechos que han descubierto una nueva forma de organizar y potenciar sus ideas de manera visual."
-                />
-                <DashboardButton />
+            <div className="my-20">
+                <PlatformYouCanTrust/>
             </div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:mx-[10%] mx-[5%]">
                 <BlogLinks blogTitle="Mapa Conceptual Online" blogImage="/placeholders/mapa-conceptual.png" blogHref="/mapa-conceptual" blogDescription="Descubre cómo desatar tu creatividad y potenciar la colaboración en tiempo real con Sketchlie."/>
