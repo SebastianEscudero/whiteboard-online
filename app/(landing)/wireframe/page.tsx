@@ -13,7 +13,10 @@ import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 export const metadata: Metadata = {
     title: "Crea Wireframes online gratis | Sketchlie",
     description: "Diseña wireframes de aplicaciones y sitios web de manera sencilla utilizando Sketchlie, una herramienta gratuita para crear wireframes. Ideal para equipos que trabajan de forma remota.",
-    keywords: ["wireframes", "wireframes online", "wireframes gratis"]
+    keywords: ["wireframes", "wireframes online", "wireframes gratis"],
+    alternates: {
+        canonical: "https://www.sketchlie.com/wireframe",
+    }
 };
 
 const LandingPage = () => {

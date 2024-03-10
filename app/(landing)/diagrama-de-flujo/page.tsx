@@ -13,7 +13,10 @@ import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 export const metadata: Metadata = {
     title: "Creador de Diagramas de Flujo | Sketchlie",
     description: "Crea tus diagramas de flujo en línea en minutos con Sketchlie y comienza a colaborar con tu equipo! Con una amplia gama de símbolos y plantillas gratuitas, simplifica tus flujos de trabajo. ¡Regístrate ahora y empieza!",
-    keywords: ["diagrama de flujo", "diagrama de flujo online", "diagrama de flujo gratis"]
+    keywords: ["diagrama de flujo", "diagrama de flujo online", "diagrama de flujo gratis"],
+    alternates: {
+        canonical: "https://www.sketchlie.com/diagrama-de-flujo",
+    }
 };
 
 const LandingPage = () => {

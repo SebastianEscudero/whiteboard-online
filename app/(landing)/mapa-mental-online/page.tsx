@@ -13,7 +13,10 @@ import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 export const metadata: Metadata = {
     title: "Crea un Mapa Conceptual online gratis | Sketchlie",
     description: "Libera tu imaginación. Diseña mapas mentales en línea. Crea fácilmente un mapa mental con nuestra herramienta de mapas mentales. ¡Prueba el plan gratuito o elige Pro!",
-    keywords: ["mapa mental", "mapa mental online", "mapa mental gratis"]
+    keywords: ["mapa mental", "mapa mental online", "mapa mental gratis"],
+    alternates: {
+        canonical: "https://www.sketchlie.com/mapa-mental-online",
+    }
 };
 
 const LandingPage = () => {

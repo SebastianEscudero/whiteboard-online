@@ -13,7 +13,6 @@ import {
 import { LogoSlider } from "./logo-slider";
 import Image from "next/image";
 import { useUser } from "@clerk/nextjs";
-import { PlatformYouCanTrust } from "./platform-you-can-trust";
 
 const components: { title: string; href: string}[] = [
     {

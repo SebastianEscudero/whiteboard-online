@@ -12,7 +12,10 @@ import { PlatformYouCanTrust } from "@/components/platform-you-can-trust";
 export const metadata: Metadata = {
     title: "Crea tu Pizarra Online Gratis | Sketchlie",
     description: "La pizarra online de Sketchlie ayuda a las personas a colaborar y presentar ideas de manera efectiva, logrando mejores productos todo desde una pizarra online. Segura y pensada para tu empresas.",
-    keywords: ["pizarra online", "pizarra online gratis", "pizarra online colaborativa"]
+    keywords: ["pizarra online", "pizarra online gratis", "pizarra online colaborativa"],
+    alternates: {
+        canonical: "https://www.sketchlie.com/pizarra-online",
+    }
   };
 
 const LandingPage = () => {
