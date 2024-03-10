@@ -11,7 +11,7 @@ import { HowToCreate } from "@/components/how-to-create";
 import { BlogLinks } from "@/components/blog-links";
 
 export const metadata: Metadata = {
-    title: "La herramienta de mapa de procesos | Sketchlie",
+    title: "La herramienta de Mapa de Procesos | Sketchlie",
     description: "El mapa de procesos ayuda a los equipos a mapear y implementar mejoras. Registrate hoy con una 3 espacios de trabajo gratuitos para empezar a utilizar la mejor herramienta de mapa de procesos. Empieza hoy gratis.",
 };
 

@@ -11,7 +11,7 @@ import { HowToCreate } from "@/components/how-to-create";
 import { BlogLinks } from "@/components/blog-links";
 
 export const metadata: Metadata = {
-    title: "Creador de diagramas de flujo | Sketchlie",
+    title: "Creador de Diagramas de Flujo | Sketchlie",
     description: "Crea tus diagramas de flujo en línea en minutos con Sketchlie y comienza a colaborar con tu equipo! Con una amplia gama de símbolos y plantillas gratuitas, simplifica tus flujos de trabajo. ¡Regístrate ahora y empieza!"
 };
 
