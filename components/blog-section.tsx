@@ -22,6 +22,7 @@ export const BlogSection = ({
                 layout="responsive"
                 width={10}
                 height={10}
+                loading="eager"
             />
         </div>
     );

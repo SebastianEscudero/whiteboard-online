@@ -26,6 +26,7 @@ export const BlogLinks = ({
                     width={300}
                     height={200}
                     layout="responsive"
+                    loading="eager"
                 />
                 <div className="p-5 bg-[#FFF] rounded-md md:h-[300px] lg:h-[350px] xl:h-[300px] 2xl:h-[250px]">
                     <h2 className="mb-5">
