@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>
-        <Suspense>
+        <Suspense fallback={<Loading />}>
           <ConvexClientProvider>
             <Toaster />
             <ProModalProvider />

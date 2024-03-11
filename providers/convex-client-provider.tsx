@@ -30,6 +30,9 @@ export const ConvexClientProvider = ({
                 <Authenticated>
                     {children}
                 </Authenticated>
+                <AuthLoading>
+                    <Loading />
+                </AuthLoading>
                 <Unauthenticated>
                     {children}
                 </Unauthenticated>

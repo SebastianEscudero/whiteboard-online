@@ -21,12 +21,6 @@ const config = {
       backgroundImage: theme => ({
         'blur-background': "url('/placeholders/landingcta.jpg')",
       }),
-      backgroundSize: {
-        'cover': 'cover',
-      },
-      blur: {
-        'blur': '5px',
-      },
       fontFamily: {
         'roobert': ['Roobert PRO', 'Helvetica', 'Arial', 'sans-serif'],
         'figtree': ['Figtree', 'sans-serif']
