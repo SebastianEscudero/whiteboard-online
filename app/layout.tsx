@@ -19,6 +19,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.sketchlie.com",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/public/favicon/favicon.ico",
+    apple: "/public/favicon/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
