@@ -12,7 +12,7 @@ export const LandingContent = () => {
         <div>
              <LogoSlider />
 ]            <LandingVideo />
-            <div className="md:my-16 lg:my-20 my-10">
+            <div className="md:my-14 lg:my-16 my-10">
                 <BlogSection 
                     title="El punto de encuentro entre la planificación y la ejecución."
                 />

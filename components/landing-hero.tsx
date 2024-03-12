@@ -30,7 +30,9 @@ export const LandingHero = () => {
                 </div>
             </div>
             <div className="text-sm md:text-xl font-normal text-zinc-800 mx-auto text-center">
-            Haz una lluvia de ideas, colabora y da vida a tus ideas en nuestro espacio de trabajo interactivo. Únete a nosotros y convierte tus ideas en realidad.
+                <p>
+                    Haz una lluvia de ideas, colabora y da vida a tus ideas en nuestro espacio de trabajo interactivo. Únete a nosotros y convierte tus ideas en realidad.
+                </p>
             </div>
             <div className="text-center ">
                 <Link href={"/dashboard"}>
