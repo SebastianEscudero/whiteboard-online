@@ -11,7 +11,7 @@ export const LandingNavbar = () => {
     const { user } = useUser();
 
     return (
-        <nav className="py-4 bg-[#FFFFFF] border">
+        <nav className="py-3 bg-[#FFFFFF] border-b border-zinc-600 sticky top-0 z-50">
             <div className="flex items-center justify-between lg:mx-[10%] mx-[5%]">
                 <div className="flex items-center">
                     <main>

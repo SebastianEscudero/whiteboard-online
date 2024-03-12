@@ -10,8 +10,8 @@ import { BlogLinks } from "./blog-links";
 export const LandingContent = () => {
     return (
         <div>
-            <LogoSlider />
-            <LandingVideo />
+             <LogoSlider />
+]            <LandingVideo />
             <div className="md:my-16 lg:my-20 my-10">
                 <BlogSection 
                     title="El punto de encuentro entre la planificación y la ejecución."
