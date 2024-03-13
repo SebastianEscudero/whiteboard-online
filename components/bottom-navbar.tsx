@@ -126,7 +126,7 @@ export const BotNavbar = () => {
                             className="py-5 text-lg hover:underline ml-5"
                             href="/blog"
                         >
-                            Blog 🚧 
+                            Blog 
                         </Link>
                     </div>
                     <div className="py-4 text-lg border-b font-medium">

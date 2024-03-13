@@ -123,7 +123,7 @@ export function NavigationMenuLanding() {
         <NavigationMenuItem>
         <Link href="/blog">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Blog 🚧
+              Blog
             </NavigationMenuLink>
           </Link>
           <Link href="/pricing" legacyBehavior passHref>

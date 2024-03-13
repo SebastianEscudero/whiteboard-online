@@ -52,8 +52,7 @@ const LandingPage = () => {
         }
     ];
     return ( 
-        <div className="h-full">
-            <LandingNavbar />
+        <div>
             <BlogStructure
                 title="La pizarra online para colaborar."
                 description="Sketchlie es una pizarra online rápida, gratuita y fácil de usar pensada para  ayudarte a colaborar con cualquier persona desde cualquier lugar."
@@ -84,14 +83,14 @@ const LandingPage = () => {
             <BlogSection
                 title="Planificación y Gestión de Proyectos" 
                 text="Equipada con herramientas de planificación integradas, nuestra pizarra online simplifica la organización de tareas, la asignación de responsabilidades y el seguimiento del progreso del proyecto. Desde la creación de listas de tareas hasta la visualización de cronogramas, Sketchlie te ofrece todo lo que necesitas para gestionar tus proyectos de manera eficaz en un solo lugar."
-                img="/placeholders/prototype-wireframe.png"
+                img="/placeholders/diagrama-de-flujo.png"
                 side="right"
             />
 
             <BlogSection
                 title="La pizarra online única de Sketchlie." 
                 text="Invita a colegas a tu pizarra online para sesiones de lluvia de ideas, toma de notas y seguimiento de proyectos. Comparte tu pantalla, realiza videoconferencias y aprovecha el modo de presentación para reuniones estimulantes. La rapidez y versatilidad de Sketchlie permiten que múltiples usuarios trabajen simultáneamente sin esfuerzo, convirtiendo cada sesión en una experiencia colaborativa inigualable."
-                img="/placeholders/car-sales-grafic.png"
+                img="/placeholders/pizarra-online.png"
                 side="right"
             />
             <div className="my-20">
@@ -103,7 +102,6 @@ const LandingPage = () => {
                 <BlogLinks blogTitle="Wireframes" blogImage="/placeholders/wireframe.png" blogHref="/wireframe" blogDescription="Empieza a visualizar tus ideas en minutos con nuestro intuitivo creador de wireframes. Crea esquemas de lo que necesites, desde páginas de inicio hasta formularios y menús, con nuestro creador de wireframes. "/>
             </div>
             <FaqSection accordionData={faqData} sectionTitle="las pizarras online"/>
-            <BotNavbar />
         </div>
 
      );

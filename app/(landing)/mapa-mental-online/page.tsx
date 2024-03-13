@@ -68,8 +68,7 @@ const LandingPage = () => {
     ]
     
     return ( 
-        <div className="h-full">
-            <LandingNavbar />
+        <div>
             <BlogStructure
                 title="Crea Mapas Mentales Online de Forma Creativa"
                 description="Libera tu imaginación y organiza tus ideas de manera visual con nuestra herramienta para crear mapas mentales en línea. Descubre cómo el diseño de mapas mentales puede potenciar tu creatividad y mejorar tu productividad en proyectos personales y profesionales."
@@ -99,13 +98,13 @@ const LandingPage = () => {
             <BlogSection
                 title="Haz tus mapas mentales más fáciles y efectivos"
                 text="Optimiza tu proceso de estudio y organización con mapas mentales simples y efectivos. Simplifica información compleja, identifica relaciones clave y mejora tu comprensión global de los temas. Convierte tus notas y apuntes en mapas mentales claros y concisos, facilitando la revisión y el recuerdo de la información cuando más lo necesitas."
-                img="/placeholders/prototype-wireframe.png"
+                img="/placeholders/diagrama-de-flujo.png"
                 side="right"
             />
             <BlogSection
                 title="Simplifica tu vida con mapas mentales intuitivos" 
                 text="Haz que la organización y la planificación sean más simples y eficientes con mapas mentales intuitivos. Desde la gestión de tareas hasta la toma de decisiones, los mapas mentales te ayudan a estructurar la información de manera clara y accesible. Optimiza tu productividad y reduce el estrés utilizando esta herramienta práctica en tu vida diaria."
-                img="/placeholders/car-sales-grafic.png"
+                img="/placeholders/pizarra-online.png"
                 side="right"
             />
             <div className="my-20">
@@ -118,7 +117,6 @@ const LandingPage = () => {
             </div>
             <HowToCreate steps={steps} title="¿Cómo se crea un mapa mental?"/>
             <FaqSection accordionData={faqData} sectionTitle="mapas mentales" />
-            <BotNavbar />
         </div>
      );
 }

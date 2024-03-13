@@ -71,8 +71,7 @@ const LandingPage = () => {
     ];    
     
     return ( 
-        <div className="h-full">
-            <LandingNavbar />
+        <div>
             <BlogStructure
                 title="Optimiza tus flujos de trabajo con mapas de procesos"
                 description="Libera tu imaginación y organiza tus ideas de manera visual con nuestra herramienta para crear mapas mentales en línea. Descubre cómo el diseño de mapas mentales puede potenciar tu creatividad y mejorar tu productividad en proyectos personales y profesionales."
@@ -102,13 +101,13 @@ const LandingPage = () => {
             <BlogSection
                 title="Impulsa la innovación y la mejora continua"
                 text="Al comprender completamente tus procesos actuales, puedes identificar áreas para la innovación y la mejora continua. Los mapas de procesos te brindan una visión holística de tus operaciones, lo que te permite desarrollar nuevas ideas y estrategias para mantener la competitividad en un mercado en constante cambio."
-                img="/placeholders/prototype-wireframe.png"
+                img="/placeholders/diagrama-de-flujo.png"
                 side="right"
             />
             <BlogSection
                 title="Maximiza la productividad del equipo" 
                 text="Al simplificar y optimizar tus flujos de trabajo mediante mapas de procesos, puedes aumentar la productividad de tu equipo. Elimina la confusión y la redundancia, permitiendo que tus empleados se centren en tareas de mayor valor añadido y alcancen sus metas con mayor rapidez."
-                img="/placeholders/car-sales-grafic.png"
+                img="/placeholders/pizarra-online.png"
                 side="right"
             />
             <div className="my-20">
@@ -121,7 +120,6 @@ const LandingPage = () => {
             </div>
             <HowToCreate steps={steps} title="¿Cómo se crea un mapa mental?"/>
             <FaqSection accordionData={faqData} sectionTitle="mapas mentales" />
-            <BotNavbar />
         </div>
      );
 }

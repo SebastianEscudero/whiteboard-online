@@ -63,8 +63,7 @@ const LandingPage = () => {
     ]
     
     return ( 
-            <div className="h-full">
-            <LandingNavbar />
+            <div>
             <BlogStructure
                 title="Herramienta para crear Wireframes Online"
                 description="Diseña tus proyectos web de manera efectiva y eficiente con nuestro creador de wireframes en línea. Visualiza la estructura y el diseño de tu sitio web antes de empezar a codificar, asegurando una experiencia de usuario óptima desde el principio."
@@ -95,13 +94,13 @@ const LandingPage = () => {
             <BlogSection
                 title="Por qué los Wireframes son Cruciales en el Proceso de Diseño Web"
                 text="Los wireframes son más que simples bocetos. Son herramientas poderosas que te permiten visualizar la arquitectura de tu sitio web antes de sumergirte en el diseño visual. Con ellos, puedes planificar la disposición de los elementos, la navegación del usuario y la jerarquía de la información."
-                img="/placeholders/prototype-wireframe.png"
+                img="/placeholders/diagrama-de-flujo.png"
                 side="right"
             />
             <BlogSection
                 title="Wireframes: El Secreto para una Colaboración Efectiva en Diseño" 
                 text="Los wireframes no solo son para diseñadores. Son herramientas de comunicación efectivas que pueden ayudar a alinear a todo tu equipo, desde diseñadores hasta desarrolladores y clientes. Con wireframes claros y precisos, puedes garantizar que todos estén en la misma página y trabajen hacia un objetivo común."
-                img="/placeholders/car-sales-grafic.png"
+                img="/placeholders/pizarra-online.png"
                 side="right"
             />
             <div className="my-20">
@@ -114,7 +113,6 @@ const LandingPage = () => {
             </div>
             <HowToCreate steps={steps} title="Cómo hacer un wireframe"/>
             <FaqSection accordionData={faqData} sectionTitle="los wireframes" />
-            <BotNavbar />
         </div>
 
      );

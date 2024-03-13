@@ -58,8 +58,7 @@ const LandingPage = () => {
     ];
     
     return ( 
-        <div className="h-full">
-            <LandingNavbar />
+        <div>
             <BlogStructure
                 title="La manera más fácil de crear mapas conceptuales online"
                 description="Crea mapas conceptuales online de forma gratuita con Sketchlie. Comienza ahora y colabora con tu equipo en el diseño de mapas conceptuales."
@@ -89,13 +88,13 @@ const LandingPage = () => {
             <BlogSection
                 title="Desde la Idea hasta la Ejecución" 
                 text="Simplifica la planificación y gestión de proyectos, proporcionando una plataforma centralizada para organizar tareas, asignar responsabilidades y realizar un seguimiento del progreso. Con herramientas integradas para la colaboración y la comunicación, llevar tus proyectos desde la concepción hasta la ejecución nunca ha sido tan fácil. Comparte tus mapas conceptuales directamente desde Google Drive para una colaboración aún más fluida."
-                img="/placeholders/prototype-wireframe.png"
+                img="/placeholders/diagrama-de-flujo.png"
                 side="right"
             />
             <BlogSection
                 title="Tu Herramienta Esencial para la Creatividad Colaborativa" 
                 text="Lleva la colaboración a un nivel completamente nuevo. Desde sesiones de lluvia de ideas hasta reuniones de seguimiento de proyectos, esta herramienta versátil y fácil de usar está diseñada para potenciar la creatividad y la productividad de tu equipo. Únete a la revolución de la colaboración online con Sketchlie. Haz clic para crear mapas conceptuales en línea y compartirlos con tu equipo en tiempo real."
-                img="/placeholders/car-sales-grafic.png"
+                img="/placeholders/pizarra-online.png"
                 side="right"
             />
             <div className="my-20">
@@ -107,7 +106,6 @@ const LandingPage = () => {
                 <BlogLinks blogTitle="Wireframes" blogImage="/placeholders/wireframe.png" blogHref="/wireframe" blogDescription="Empieza a visualizar tus ideas en minutos con nuestro intuitivo creador de wireframes. Crea esquemas de lo que necesites, desde páginas de inicio hasta formularios y menús, con nuestro creador de wireframes. "/>
             </div>
             <FaqSection accordionData={faqData} sectionTitle="un mapa conceptual"/>
-            <BotNavbar />
         </div>
 
      );

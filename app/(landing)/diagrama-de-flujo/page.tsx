@@ -78,13 +78,12 @@ const LandingPage = () => {
     ]
     
     return ( 
-        <div className="h-full">
-            <LandingNavbar />
+        <div>
             <BlogStructure
                 title="Creador de diagramas de flujo online"
                 description="Crea diagramas de flujo rápidamente y simplifica tus rutinas con el creador de diagramas de flujo de Sketchlie. Visualiza los pasos del proceso que estés creando, desde alinear a los equipos hasta pasar a la acción con toda la información."
                 cta="Crear mapa conceptual"
-                img="/placeholders/mapa-mental.png"
+                img="/placeholders/diagrama-de-flujo.png"
             />
             <LogoSlider />
             <LandingVideo />
@@ -110,13 +109,13 @@ const LandingPage = () => {
             <BlogSection
                 title="Crea un Diagrama de Flujo Online de Forma Intuitiva con Sketchlie"
                 text="Descubre cómo crear diagramas de flujo de manera intuitiva y colaborativa con Sketchlie. Nuestra plataforma en línea te ofrece herramientas poderosas para visualizar procesos, organizar información y colaborar con tu equipo en tiempo real. Simplifica la comunicación y la planificación de proyectos con nuestras funciones intuitivas y fáciles de usar. ¡Comienza a mapear tus flujos hoy mismo con Sketchlie!"
-                img="/placeholders/prototype-wireframe.png"
+                img="/placeholders/diagrama-de-flujo.png"
                 side="right"
             />
             <BlogSection
                 title="Potencia tus diagramas de flujo" 
                 text="Explora cómo Sketchlie puede llevar la colaboración a un nivel completamente nuevo. Desde sesiones de lluvia de ideas hasta reuniones de seguimiento de proyectos, esta herramienta versátil y fácil de usar está diseñada para potenciar la creatividad y la productividad de tu equipo. Únete a la revolución de la colaboración online. ¡Regístrate hoy mismo!"
-                img="/placeholders/car-sales-grafic.png"
+                img="/placeholders/pizarra-online.png"
                 side="right"
             />
             <div className="my-20">
@@ -129,7 +128,6 @@ const LandingPage = () => {
             </div>
             <HowToCreate steps={steps} title="Cómo hacer un diagrama de flujo"/>
             <FaqSection accordionData={faqData} sectionTitle="diagramas de flujo" />
-            <BotNavbar />
         </div>
 
      );
