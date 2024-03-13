@@ -1,5 +1,3 @@
-import { LandingNavbar } from "@/components/landing-navbar";
-import { BotNavbar } from "@/components/bottom-navbar";
 import { BlogStructure } from "@/components/blog-structure";
 import { Metadata } from "next";
 import { BlogSection } from "@/components/blog-section";
@@ -76,7 +74,16 @@ const LandingPage = () => {
                 img="/placeholders/mapa-mental.png"
             />
             <LogoSlider />
-            <LandingVideo />
+            <div className="w-full lg:px-[10%] px-[5%] flex justify-center">
+            <video 
+                className="rounded-2xl border border-black"
+                src="/placeholders/landingvideo.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                />
+            </div>
             <div className="mb:my-28 my-14">
                 <BlogSection 
                     title="Visualiza y Organiza tus Ideas con Mapas Mentales" 

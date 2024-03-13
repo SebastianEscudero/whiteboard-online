@@ -11,7 +11,16 @@ export const LandingContent = () => {
     return (
         <div>
              <LogoSlider />
-]            <LandingVideo />
+             <div className="w-full lg:px-[10%] px-[5%] flex justify-center">
+                <video 
+                    className="rounded-2xl border border-black"
+                    src="/placeholders/landingvideo.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+            </div>
             <div className="md:my-14 lg:my-16 my-10">
                 <BlogSection 
                     title="El punto de encuentro entre la planificación y la ejecución."

@@ -28,7 +28,7 @@ export const BlogLinks = ({
                     width={300}
                     height={200}
                     layout="responsive"
-                    loading="eager"
+                    
                 />
             </Link>
             <div className="flex-1 flex flex-col justify-between p-5 bg-[#FFF] rounded-md">

@@ -5,7 +5,7 @@ import Link from "next/link"
 export const PlatformYouCanTrust = () => {
     return (
         <div>
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 mx-5">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-5 text-[#000000]">
                     Plataforma en la que puedes confiar.
                 </h2>

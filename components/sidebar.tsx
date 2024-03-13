@@ -74,7 +74,6 @@ const Sidebar = () => {
                       height={40}
                       alt="Logo"
                       src="/logo.svg"    
-                      loading="eager"
                   />
                   <h1 className="text-2xl text-[#38322C] font-roobert">
                       Sketchlie

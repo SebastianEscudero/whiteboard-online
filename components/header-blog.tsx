@@ -43,7 +43,7 @@ export const HeaderBlog = ({
                     width={300}
                     height={200}
                     layout="responsive"
-                    loading="eager"
+                    
                 />
             </Link>
         </div>
