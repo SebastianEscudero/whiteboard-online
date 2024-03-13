@@ -44,7 +44,7 @@ export const BlogLinks = ({
                     <Link
                         href={blogHref}
                     >
-                        <Button variant="ghost">
+                        <Button variant="blog">
                             Leer más
                         </Button>
                     </Link>

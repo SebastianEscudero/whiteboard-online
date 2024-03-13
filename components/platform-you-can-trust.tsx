@@ -13,7 +13,7 @@ export const PlatformYouCanTrust = () => {
                     Sketchlie es una plataforma segura y confiable que puede manejar cualquier situación que se presente
                 </p>
             </div>
-            <div className="bg-[#FFF] p-4 lg:pb-5 pb-5 border border-zinc-500 rounded-lg xl:mx-[20%] mx-[2%] lg:mx-[5%]">
+            <div className="bg-[#FFF] p-4 lg:pb-5 pb-5 border border-zinc-500 rounded-lg xl:mx-[20%] mx-[4%] lg:mx-[5%]">
                 <div className="py-3">
                     <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 rounded-lg my-4">
                         <div className="md:p-7 py-6 m-2 rounded-md">

@@ -16,7 +16,7 @@ export const HeaderBlog = ({
     blogTitle
 }: BlogLinksProps) => {
     return(
-        <div className="flex md:flex-row flex-col-reverse w-auto rounded-lg border border-zinc-600 transform transition-all duration-150 hover:scale-105">
+        <div className="flex md:flex-row flex-col-reverse w-auto rounded-lg border border-zinc-600">
             <div className="flex-1 flex flex-col justify-between p-10 bg-[#1C1C1E] md:rounded-l-lg rounded-l-none text-[#FFF]">
                 <div>
                     <h2 className="mb-5 xl:text-4xl md:text-2xl text-3xl">
